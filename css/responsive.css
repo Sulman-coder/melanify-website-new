@@ -1,0 +1,344 @@
+/* Tablet */
+@media (max-width: 768px) {
+    .chapter-hero {
+        padding: 48px 22px 56px;
+    }
+
+    .chapter-hero .chapter-description h1 {
+        margin-bottom: 26px;
+        font-size: clamp(28px, 5vw, 40px);
+    }
+
+    .chapter-hero .chapter-description p {
+        margin-bottom: 18px;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .chapter-hero {
+        padding: 36px 18px 44px;
+    }
+
+    .chapter-hero .chapter-description h1 {
+        margin-bottom: 22px;
+        font-size: 29px;
+        line-height: 1.25;
+    }
+
+    .chapter-hero .chapter-description p {
+        margin-bottom: 16px;
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .chapter-hero .chapter-description p:nth-of-type(3) {
+        font-size: 17px;
+    }
+}
+
+/* Responsive Text */
+@media (max-width: 768px) {
+    .chapter-hero .chapter-description {
+        padding: 0 5px;
+        box-sizing: border-box;
+    }
+
+    .chapter-hero .chapter-description h1 {
+        font-size: clamp(26px, 6vw, 36px);
+    }
+}
+
+
+
+/* TABLET */
+
+@media (max-width: 950px) {
+  .problem-section {
+    padding: 70px 22px;
+  }
+
+  .problem-container {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+    gap: 30px;
+  }
+
+  .problem-image img {
+    height: 380px;
+  }
+
+  .problem-toggle {
+    padding: 20px 14px;
+  }
+
+  .problem-panel {
+    padding: 0 14px 22px;
+  }
+
+  .problem-panel-inner p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .problem-section {
+    padding: 50px 18px;
+  }
+
+  .problem-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+
+  .problem-heading {
+    margin-bottom: 25px;
+  }
+
+  .problem-heading h2 {
+    font-size: clamp(29px, 7vw, 38px);
+  }
+
+  .problem-title {
+    font-size: 17px;
+  }
+
+  .problem-toggle {
+    gap: 12px;
+    padding: 20px 12px;
+  }
+
+  .problem-icon {
+    flex-basis: 28px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .problem-panel {
+    padding: 0 12px 22px;
+  }
+
+  .problem-panel-inner p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .problem-visual {
+    position: relative;
+    top: auto;
+  }
+
+  .problem-image img {
+    height: auto;
+    min-height: 230px;
+    max-height: 380px;
+    object-fit: contain;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+  .problem-section {
+    padding: 40px 14px;
+  }
+
+  .problem-heading h2 {
+    font-size: 28px;
+  }
+
+  .problem-title {
+    font-size: 15px;
+  }
+
+  .problem-image figcaption {
+    padding: 14px;
+    gap: 10px;
+    font-size: 12px;
+  }
+}
+
+/* REDUCE MOTION FOR ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .problem-section *,
+  .problem-section *::before,
+  .problem-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+
+
+/* Tablet */
+@media (max-width: 900px) {
+  .pichia-section {
+    padding: 60px 20px;
+  }
+
+  .pichia-diagram {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    height: auto;
+  }
+
+  .pichia-card {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    min-height: 160px;
+  }
+
+  .pichia-center {
+    position: relative;
+    top: auto;
+    left: auto;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 280px;
+    margin: 12px auto;
+    transform: none;
+  }
+
+  .pichia-image-circle {
+    width: 280px;
+    height: 280px;
+  }
+
+  .card-tl {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .card-tr {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .card-bl {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .card-br {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .connector {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .pichia-section {
+    padding: 45px 16px;
+  }
+
+  .pichia-intro {
+    margin-bottom: 35px;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .pichia-heading {
+    margin-bottom: 28px;
+    font-size: 34px;
+  }
+
+  .pichia-diagram {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pichia-card {
+    min-height: auto;
+    padding: 22px 18px;
+  }
+
+  .card-tl {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .card-tr {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .pichia-center {
+    grid-column: 1;
+    grid-row: 3;
+    width: min(280px, 100%);
+    margin: 12px auto;
+  }
+
+  .pichia-image-circle {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .card-bl {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .card-br {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  .pichia-bottom-text {
+    margin-top: 28px;
+    font-size: 15px;
+  }
+
+  .pichia-button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pichia-card,
+  .pichia-button {
+    transition: none;
+  }
+}
+
+
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+  .references-section {
+    padding: 52px 18px;
+  }
+
+  .references-section h2 {
+    font-size: 32px;
+  }
+
+  .references-intro {
+    font-size: 14px;
+  }
+
+  .references-list {
+    padding-left: 22px;
+  }
+
+  .references-list li {
+    padding: 15px 4px 15px 5px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+}

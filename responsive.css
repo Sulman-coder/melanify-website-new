@@ -1,0 +1,580 @@
+ 
+ 
+ 
+ /* TABLET RESPONSIVE */
+
+
+@media (max-width: 800px) {
+  .story-section {
+    padding: 55px 20px;
+  }
+
+  .environment-container {
+    gap: 18px;
+  }
+
+  .environment-card h2 {
+    font-size: 14px;
+  }
+
+  .environment-card p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .story-section .challenge-heading {
+    font-size: 17px;
+  }
+}
+
+
+   /* MOBILE RESPONSIVE */
+
+
+@media (max-width: 600px) {
+  .story-section {
+    padding: 44px 18px;
+  }
+
+  .story-section .section-heading {
+    margin-bottom: 32px;
+    text-align: left;
+  }
+
+  .story-section .section-heading h2 {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 30px;
+    line-height: 1.2;
+    text-align: left;
+    text-wrap: wrap;
+  }
+
+  .story-section .section-heading p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .story-section .challenge-heading {
+    margin-bottom: 18px;
+    font-size: 16px;
+  }
+
+  .environment-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .environment-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .environment-card h2 {
+    font-size: 17px;
+    margin-bottom: 12px;
+  }
+
+  .environment-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .environment-card p {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .story-section .story-button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+
+   /* REDUCED MOTION ACCESSIBILITY */
+
+
+@media (prefers-reduced-motion: reduce) {
+  .environment-image,
+  .story-section .story-button {
+    transition: none;
+  }
+
+  .environment-card:hover .environment-image {
+    transform: none;
+    filter: none;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .home-hero .hero-image {
+        padding: 0 12px;
+    }
+
+    .home-hero .hero-image img {
+        max-height: 300px;
+    }
+}
+
+
+
+/* Mobile screens */
+@media (max-width: 600px) {
+    .story-section .section-heading h2 {
+        font-size: 25px;
+        line-height: 1.3;
+        text-wrap: balance;
+    }
+
+    .story-section .section-heading h2 span {
+        white-space: normal;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .engineering-top-intro {
+        margin-bottom: 18px;
+        padding: 0 16px;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 800px) {
+  .melanify-section {
+    padding: 50px 20px;
+  }
+
+  .melanify-image-wrap {
+    margin-bottom: 32px;
+  }
+
+  .pathway-steps {
+    gap: 7px;
+    padding: 16px 10px;
+  }
+
+  .pathway-step {
+    min-height: 68px;
+    padding: 10px 4px;
+  }
+
+  .step-name {
+    font-size: 12px;
+  }
+
+  .pathway-arrow {
+    font-size: 15px;
+  }
+
+  .pathway-info {
+    padding: 24px 20px;
+  }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+  .melanify-section {
+    padding: 38px 16px;
+  }
+
+  .melanify-intro {
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  .melanify-intro p {
+    font-size: 19px;
+    line-height: 1.65;
+  }
+
+  .melanify-image-wrap {
+    margin-bottom: 28px;
+  }
+
+  .pathway-widget-heading {
+    text-align: left;
+  }
+
+  .pathway-widget-heading h2 {
+    font-size: 25px;
+  }
+
+  .pathway-widget-heading p {
+    font-size: 14px;
+  }
+
+  /* Two-column layout for six steps */
+  .pathway-steps {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .pathway-step {
+    width: 100%;
+    min-height: 72px;
+    padding: 12px 8px;
+  }
+
+  .step-name {
+    font-size: 13px;
+  }
+
+  /* Hide inline arrows on mobile */
+  .pathway-arrow {
+    display: none;
+  }
+
+  .pathway-info {
+    margin-top: 14px;
+    padding: 22px 17px;
+  }
+
+  .info-topline {
+    font-size: 12px;
+  }
+
+  .pathway-info h3 {
+    font-size: 22px;
+  }
+
+  .pathway-info > p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .info-mechanism {
+    padding: 15px 13px;
+  }
+
+  .info-mechanism p {
+    font-size: 13px;
+  }
+
+  .melanify-action {
+    display: block;
+    margin-top: 24px;
+  }
+
+  .melanify-button {
+    width: 100%;
+    padding: 13px 16px;
+    font-size: 13px;
+  }
+}
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 360px) {
+  .melanify-section {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .pathway-steps {
+    gap: 7px;
+    padding: 10px;
+  }
+
+  .pathway-step {
+    min-height: 66px;
+  }
+
+  .step-name {
+    font-size: 12px;
+  }
+
+  .pathway-info {
+    padding: 18px 13px;
+  }
+}
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .pathway-step,
+  .melanify-button {
+    transition: none;
+  }
+
+  .pathway-step:hover,
+  .melanify-button:hover {
+    transform: none;
+  }
+}
+
+
+
+
+/* Tablet */
+@media (max-width: 900px) {
+  .impact-section {
+    padding: 55px 20px;
+  }
+
+  .impact-grid {
+    gap: 16px;
+  }
+
+  .impact-card-content {
+    padding: 20px 16px 22px;
+  }
+
+  .impact-card h3 {
+    font-size: 19px;
+  }
+
+  .impact-card p {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .engineering-callout {
+    padding: 32px;
+    gap: 20px;
+  }
+
+  .engineering-decoration {
+    flex-basis: 115px;
+    width: 115px;
+    height: 115px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .impact-section {
+    padding: 42px 16px;
+  }
+
+  .impact-intro {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .impact-intro h2 {
+    font-size: clamp(27px, 7vw, 34px);
+  }
+
+  .impact-intro p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .impact-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .impact-card-content {
+    padding: 22px 20px 24px;
+  }
+
+  .impact-card h3 {
+    font-size: 21px;
+  }
+
+  .impact-card p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .impact-badge {
+    font-size: 10px;
+  }
+
+  .engineering-callout {
+    margin-top: 36px;
+    padding: 26px 20px;
+  }
+
+  .engineering-content {
+    max-width: 100%;
+  }
+
+  .engineering-content h2 {
+    font-size: 27px;
+  }
+
+  .engineering-content p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .engineering-decoration {
+    display: none;
+  }
+
+  .engineering-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 360px) {
+  .impact-section {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .impact-card-content {
+    padding: 18px 15px 20px;
+  }
+
+  .engineering-callout {
+    padding: 22px 16px;
+  }
+
+  .engineering-content h2 {
+    font-size: 24px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .impact-card,
+  .impact-image,
+  .engineering-button {
+    transition: none;
+  }
+
+  .impact-card:hover,
+  .impact-card:hover .impact-image,
+  .engineering-button:hover {
+    transform: none;
+  }
+}
+
+
+
+/* Tablet */
+@media (max-width: 900px) {
+  .impact-grid {
+    gap: 18px;
+  }
+
+  .impact-image-wrap {
+    width: min(100%, 175px);
+  }
+
+  .impact-card h3 {
+    font-size: 16px;
+  }
+
+  .impact-card p {
+    font-size: 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .impact-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .impact-image-wrap {
+    width: 190px;
+    max-width: 75%;
+    margin-bottom: 16px;
+  }
+
+  .impact-card-content {
+    padding: 0 4px;
+  }
+
+  .impact-card h3 {
+    font-size: 20px;
+  }
+
+  .impact-card p {
+    max-width: 360px;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .impact-image {
+    transition: none;
+  }
+
+  .impact-card:hover .impact-image {
+    transform: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .include-section {
+    padding: 24px 16px;
+  }
+
+  .include-logos {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 22px;
+  }
+
+  .partners-logos .include-logo {
+    flex: 0 1 calc(33.333% - 16px);
+    min-height: 48px;
+  }
+
+  .include-logo img {
+    max-width: 100%;
+    max-height: 42px;
+  }
+
+  .sponsor-logos .include-logo {
+    width: 100px;
+    height: 90px;
+  }
+
+  .sponsor-logos img {
+    max-height: 85px;
+  }
+}
+
+@media (max-width: 420px) {
+  .partners-logos .include-logo {
+    flex-basis: calc(50% - 12px);
+  }
+
+  .include-group h3 {
+    font-size: 14px;
+  }
+}

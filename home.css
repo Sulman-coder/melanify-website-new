@@ -1,0 +1,1237 @@
+
+
+/* STORY SECTION */
+
+.story-section {
+  width: 100%;
+  padding: 70px 24px;
+  background: var(--ice);
+  color: var(--ink);
+}
+
+.story-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+
+   /* SECTION INTRODUCTION */
+
+
+.story-section .section-heading {
+  max-width: 800px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.story-section .eyebrow {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--ocean);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/* .story-section .section-heading h2 {
+  max-width: 700px;
+  margin: 0 auto 16px;
+  color: var(--deep);
+  font-family: var(--sans);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-wrap: balance;
+} */
+
+
+/* STORY SECTION HEADING */
+
+.story-section .section-heading h2 {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 16px;
+    color: var(--deep);
+    font-family: var(--sans);
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: center;
+    text-wrap: balance;
+}
+
+.story-section .section-heading h2 span {
+    display: inline;
+    white-space: normal;
+    color: var(--ocean);
+}
+
+.story-section .section-heading p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+   /* CORE CHALLENGE HEADING */
+
+
+.story-section .challenge-heading {
+  margin: 0 0 22px;
+  color: var(--ocean);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 1.5px;
+}
+
+
+   /* ENVIRONMENT CARDS */
+
+
+.environment-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.environment-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* Card headings */
+
+.environment-card h2 {
+  width: 100%;
+  margin: 0 0 12px;
+  color: #292929;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+}
+
+
+   /* IMAGES + HOVER ANIMATION */
+
+
+.environment-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  object-fit: contain;
+  object-position: center;
+  transform: scale(1);
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+/* Smooth zoom on hover */
+
+.environment-card:hover .environment-image {
+  transform: scale(1.04);
+  filter: brightness(1.06);
+}
+
+   /* DESCRIPTIONS
+   Same width as the image */
+
+
+.environment-card p {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 12px 0 0;
+  padding: 0;
+  color: #454545;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+/* Button */
+
+.story-section .story-action {
+  margin-top: 28px;
+}
+
+.story-section .story-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 12px 20px;
+  background: var(--ocean);
+  color: var(--white);
+  border: 1px solid var(--ocean);
+  border-radius: 2px;
+  font-size: 13px;
+  text-decoration: none;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.story-section .story-button:hover {
+  filter: brightness(0.92);
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+/* =====================================
+   MELANIFY PATHWAY SECTION
+===================================== */
+
+.melanify-section {
+  width: 100%;
+  padding: 65px 24px;
+  background: #ffffff;
+  color: #222222;
+}
+
+.melanify-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* =====================================
+   INTRODUCTION
+===================================== */
+
+.melanify-intro {
+  max-width: 850px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.melanify-intro p {
+  margin: 0;
+  font-size: clamp(18px, 2.2vw, 25px);
+  line-height: 1.7;
+  color: #263b35;
+  font-weight: 500;
+}
+
+/* =====================================
+   SCIENTIFIC IMAGE
+===================================== */
+
+.melanify-image-wrap {
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.melanify-science-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  margin: 0 auto;
+}
+
+/* =====================================
+   INTERACTIVE WIDGET
+===================================== */
+
+.pathway-widget {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pathway-widget-heading {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.pathway-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #398a24;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.pathway-widget-heading h2 {
+  margin: 0 0 12px;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.3;
+  color: #202820;
+}
+
+.pathway-widget-heading p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #666666;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =====================================
+   CLICKABLE PATHWAY STEPS
+===================================== */
+
+.pathway-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 22px 16px;
+  background: #f6f8f5;
+  border: 1px solid #e2e8df;
+  border-radius: 6px;
+}
+
+.pathway-step {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 0;
+  min-height: 76px;
+  padding: 12px 6px;
+  border: 1px solid #dce4d8;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #303b30;
+  cursor: pointer;
+  font-family: inherit;
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.pathway-step:hover {
+  color: #f58220;
+  border-color: #f58220;
+  transform: translateY(-3px);
+}
+
+.pathway-step.active {
+  color: #ffffff;
+  background: #398a24;
+  border-color: #398a24;
+}
+
+.pathway-step.active:hover {
+  color: #ffffff;
+  background: #2f741d;
+}
+
+.pathway-step:focus-visible {
+  outline: 3px solid #f58220;
+  outline-offset: 3px;
+}
+
+.step-number {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+.step-name {
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.pathway-arrow {
+  flex: 0 0 auto;
+  color: #398a24;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+/* =====================================
+   BLACK INFORMATION BOX
+===================================== */
+
+.pathway-info {
+  width: 100%;
+  margin-top: 18px;
+  padding: 28px 26px;
+  overflow-wrap: anywhere;
+  background: #171717;
+  color: #eeeeee;
+  border: 1px solid #333333;
+  border-radius: 4px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.info-topline {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #f5a45c;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.info-dot {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background: #71bd50;
+}
+
+.pathway-info h3 {
+  margin: 0 0 14px;
+  color: #ffffff;
+  font-size: clamp(20px, 2.5vw, 27px);
+  line-height: 1.35;
+}
+
+.pathway-info > p {
+  margin: 0;
+  color: #d0d0d0;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.info-mechanism {
+  margin-top: 24px;
+  padding: 17px 18px;
+  background: #222222;
+  border-left: 3px solid #71bd50;
+}
+
+.mechanism-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #91cb79;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.info-mechanism p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =====================================
+   CALL TO ACTION
+===================================== */
+
+.melanify-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.melanify-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: 100%;
+  min-height: 48px;
+  padding: 14px 22px;
+  background: #398a24;
+  color: #ffffff;
+  border: 1px solid #398a24;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.6;
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.melanify-button:hover {
+  background: #2f741d;
+  transform: translateY(-2px);
+}
+
+
+
+
+
+/* Pathway section — existing website theme */
+
+.melanify-section {
+  background: var(--ice);
+  color: var(--ink);
+}
+
+.melanify-intro p {
+  color: var(--deep);
+}
+
+.pathway-label {
+  color: var(--ocean);
+}
+
+.pathway-widget-heading h2 {
+  color: var(--deep);
+}
+
+.pathway-widget-heading p {
+  color: var(--muted);
+}
+
+/* Steps container */
+.pathway-steps {
+  background: var(--paper);
+  border-color: var(--line);
+}
+
+/* Normal step */
+.pathway-step {
+  background: var(--white);
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+/* Hover color */
+.pathway-step:hover {
+  color: var(--ocean);
+  border-color: var(--ocean);
+}
+
+/* Selected step */
+.pathway-step.active {
+  background: var(--ocean);
+  color: var(--white);
+  border-color: var(--ocean);
+}
+
+.pathway-step.active:hover {
+  background: var(--deep);
+  color: var(--white);
+}
+
+/* Arrows */
+.pathway-arrow {
+  color: var(--ocean);
+}
+
+/* Information box — same website colors */
+.pathway-info {
+  background: var(--deep);
+  color: var(--white);
+  border-color: var(--ocean);
+}
+
+.info-topline {
+  color: var(--mist);
+}
+
+.info-dot {
+  background: var(--blue);
+}
+
+.pathway-info h3 {
+  color: var(--white);
+}
+
+.pathway-info > p {
+  color: var(--ice);
+}
+
+/* Biological mechanism box */
+.info-mechanism {
+  background: var(--ocean);
+  border-left-color: var(--blue);
+}
+
+.mechanism-label {
+  color: var(--pale);
+}
+
+.info-mechanism p {
+  color: var(--white);
+}
+
+/* Button */
+.melanify-button {
+  background: var(--ocean);
+  color: var(--white);
+  border-color: var(--ocean);
+}
+
+.melanify-button:hover {
+  background: var(--deep);
+  border-color: var(--deep);
+  color: var(--white);
+}
+
+
+
+
+/* Impact section */
+.impact-section {
+  width: 100%;
+  padding: 50px 24px;
+  background: var(--ice);
+  color: var(--ink);
+}
+
+.impact-container {
+  width: 100%;
+  max-width: var(--page-width);
+  margin: 0 auto;
+}
+
+/* Introduction */
+.impact-intro {
+  max-width: 780px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.impact-eyebrow,
+.engineering-eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--ocean);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.impact-intro h2 {
+  margin: 0 0 16px;
+  color: var(--deep);
+  font-family: var(--sans);
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 500;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+.impact-intro p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Cards layout */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* Card design */
+.impact-card {
+  min-width: 0;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  box-shadow: 0 5px 18px rgba(18, 62, 82, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--mist);
+  box-shadow: 0 12px 28px rgba(18, 62, 82, 0.12);
+}
+
+/* Card images */
+.impact-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--pale);
+}
+
+.impact-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.impact-card:hover .impact-image {
+  transform: scale(1.045);
+}
+
+/* Number badge */
+.impact-number {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: var(--ocean);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 50%;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Card content */
+.impact-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px 22px 26px;
+}
+
+.impact-badge {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 14px;
+  padding: 7px 10px;
+  background: var(--ice);
+  color: var(--ocean);
+  border-left: 3px solid var(--blue);
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.8px;
+  overflow-wrap: anywhere;
+}
+
+.impact-card h3 {
+  margin: 0 0 12px;
+  color: var(--deep);
+  font-family: var(--sans);
+  font-size: clamp(18px, 1.7vw, 22px);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.impact-card p {
+  width: 100%;
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.8;
+  overflow-wrap: break-word;
+}
+
+/* Engineering section */
+.engineering-callout {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  margin-top: 58px;
+  padding: 42px 44px;
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--ocean);
+  border-radius: 4px;
+}
+
+.engineering-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 760px;
+}
+
+.engineering-eyebrow {
+  margin-bottom: 12px;
+}
+
+.engineering-content h2 {
+  margin: 0 0 16px;
+  color: var(--deep);
+  font-family: var(--sans);
+  font-size: clamp(25px, 3vw, 36px);
+  font-weight: 500;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+.engineering-content p {
+  max-width: 720px;
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* Engineering button */
+.engineering-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: 100%;
+  min-height: 46px;
+  padding: 13px 20px;
+  background: var(--ocean);
+  color: var(--white);
+  border: 1px solid var(--ocean);
+  border-radius: 3px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.engineering-button:hover {
+  background: var(--deep);
+  border-color: var(--deep);
+  transform: translateY(-2px);
+}
+
+.engineering-button:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 4px;
+}
+
+/* Decorative circles */
+.engineering-decoration {
+  position: relative;
+  flex: 0 0 150px;
+  width: 150px;
+  height: 150px;
+}
+
+.engineering-circle {
+  position: absolute;
+  display: block;
+  border: 1px solid var(--mist);
+  border-radius: 50%;
+}
+
+.circle-one {
+  inset: 0;
+}
+
+.circle-two {
+  inset: 20px;
+  border-color: var(--blue);
+}
+
+.circle-three {
+  inset: 42px;
+  background: var(--ice);
+  border: 7px solid var(--pale);
+}
+
+.engineering-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--mist);
+  transform: rotate(-35deg);
+}
+
+
+
+
+
+
+/* Circular impact cards */
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  align-items: start;
+}
+
+.impact-card {
+  min-width: 0;
+  overflow: visible;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: center;
+  transition: none;
+}
+
+.impact-card:hover {
+  transform: none;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.impact-image-wrap {
+  position: relative;
+  width: min(100%, 210px);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  background: var(--pale);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+}
+
+.impact-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+.impact-card:hover .impact-image {
+  transform: scale(1.07);
+}
+
+.impact-number {
+  top: 8px;
+  left: 8px;
+  width: 32px;
+  height: 32px;
+  font-size: 11px;
+}
+
+.impact-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.impact-badge {
+  margin-bottom: 10px;
+  padding: 5px 8px;
+  background: var(--ice);
+  color: var(--ocean);
+  border-left: 2px solid var(--blue);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.impact-card h3 {
+  margin: 0 0 10px;
+  color: var(--deep);
+  font-size: 18px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.impact-card p {
+  width: 100%;
+  max-width: 310px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+
+
+.include-section {
+  width: 100%;
+  padding: 28px 24px 36px;
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+}
+
+.include-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.include-group {
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.include-group h3 {
+  margin: 0 0 18px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #222;
+}
+
+.include-logos {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 28px;
+}
+
+.include-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.partners-logos .include-logo {
+  flex: 1 1 0;
+}
+
+.include-logo img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 48px;
+  object-fit: contain;
+}
+
+.sponsor-group {
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+.sponsor-logos {
+  gap: 35px;
+  align-items: center;
+}
+
+.sponsor-logos .include-logo {
+  width: 115px;
+  height: 105px;
+}
+
+.sponsor-logos img {
+  max-width: 100%;
+  max-height: 100px;
+}
+
+
+
+
+
+/* One Background Image Behind All Main Sections */
+#main {
+    /* background-image: url("images/background.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+} */
+
+background-image: url("images/background.jpeg");
+ background-size: cover; 
+ background-position: center; 
+ background-repeat: no-repeat; 
+ background-attachment: scroll; 
+ filter: none; }
+
+/* Keep All Sections Transparent */
+#main #explore-story,
+#main #melanify-pathway,
+#main #values,
+#main .section-intro.wrap {
+    background-color: transparent;
+}
+
+
+
+/* Hero Section */
+.home-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 0 60px;
+    text-align: center;
+}
+
+/* Image at the Top */
+.home-hero .hero-image {
+    width: 100%;
+}
+
+.home-hero .hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 650px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Text Below the Image */
+.home-hero .hero-copy {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 10px 24px 0;
+    box-sizing: border-box;
+}
+
+.home-hero .hero-copy h1 {
+    margin: 0 0 20px;
+    color: var(--deep);
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1.15;
+}
+
+.home-hero .hero-copy h1 span {
+    color: var(--ocean);
+}
+
+.home-hero .hero-copy p {
+    margin: 0 auto;
+    max-width: 700px;
+    color: var(--muted);
+    font-size: clamp(16px, 2vw, 21px);
+    line-height: 1.7;
+}
+
+
+
+/* Fix Hero Image Size */
+.home-hero {
+    width: 100%;
+    overflow: hidden;
+}
+
+.home-hero .hero-image {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.home-hero .hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 auto;
+}
+
+/* Keep Heading Below Image */
+.home-hero .hero-copy {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px 24px 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Mobile Screen */
+
+
+
+
+
+/* Fix Story Heading Position and Line Breaks */
+
+.story-section .section-heading {
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.story-section .section-heading h2 {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 16px;
+    font-size: clamp(26px, 3vw, 38px);
+    line-height: 1.2;
+    text-align: center;
+    text-wrap: nowrap;
+}
+
+.story-section .section-heading h2 span {
+    display: inline;
+    white-space: nowrap;
+}
+ 
+.story-action{
+  text-align: center;
+}
+
+
+
+
+/* Intro Text Above the Entire Engineering Section */
+.engineering-top-intro {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 24px;
+    padding: 0 24px;
+    box-sizing: border-box;
+    color: var(--muted);
+    font-size: 23px;
+    line-height: 1.7;
+    text-align: center;
+    color: black;
+}
+
+
+/* Reduce Space Below Engineering Intro */
+ .engineering-top-intro { margin-bottom: 20px; }
+
+
