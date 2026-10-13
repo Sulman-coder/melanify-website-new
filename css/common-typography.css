@@ -1,0 +1,47 @@
+
+/* Common text sizes for all pages */
+
+h1 {
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 34px;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 26px;
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: 21px;
+  line-height: 1.4;
+}
+
+p,
+li {
+  font-size: 23px;
+  line-height: 1.8;
+}
+
+p {
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+}
+
+
+@media (max-width: 768px) {
+  h1 { font-size: 32px; }
+  h2 { font-size: 28px; }
+  h3 { font-size: 23px; }
+  h4 { font-size: 19px; }
+
+  p,
+  li {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
