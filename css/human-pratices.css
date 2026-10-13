@@ -1,0 +1,205 @@
+
+/* ==============================
+   HUMAN PRACTICE STAGES
+================================ */
+
+.stages-timeline {
+  --stage-cyan: #08bfd5;
+  --stage-teal: #009bb0;
+  --stage-blue: #07547d;
+  --stage-navy: #001b3d;
+
+  width: 100%;
+  max-width: 850px;
+  margin: 75px auto 60px;
+  padding: 20px 12px 10px;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
+  gap: 14px;
+}
+
+.stage-card {
+  position: relative;
+  min-width: 0;
+  padding-top: 27px;
+}
+
+.stage-content {
+  min-height: 200px;
+  padding: 16px 10px 18px;
+  border-radius: 17px;
+  color: #fff;
+  overflow-wrap: anywhere;
+}
+
+.stage-1 .stage-content {
+  background: var(--stage-cyan);
+  margin-top: 22px;
+}
+
+.stage-2 .stage-content {
+  background: var(--stage-teal);
+  margin-top: -27px;
+}
+
+.stage-3 .stage-content {
+  background: var(--stage-blue);
+  margin-top: 22px;
+}
+
+.stage-4 .stage-content {
+  background: var(--stage-navy);
+  margin-top: -27px;
+}
+
+.stage-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  color: #000;
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -1.5px;
+}
+
+.stage-2 .stage-number,
+.stage-4 .stage-number {
+  top: auto;
+  bottom: -1px;
+  transform: translateY(100%);
+}
+
+.stage-content h3 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.45px;
+}
+
+.stage-content ul {
+  margin: 0;
+  padding-left: 11px;
+  list-style: disc;
+}
+
+.stage-content li {
+  margin-bottom: 3px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0.25px;
+}
+
+
+.reflection-section {
+  padding: 80px 24px;
+  background: #fafbfd;
+  color: #173d4e;
+}
+
+.reflection-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.reflection-intro {
+  max-width: 900px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.reflection-intro h2,
+.idea-framework h2 {
+  color: #075473;
+  font-family: Georgia, serif;
+}
+
+.reflection-intro h2 {
+  font-size: clamp(32px, 4vw, 46px);
+  margin-bottom: 20px;
+}
+
+.reflection-intro p {
+  color: #556f7e;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.reflection-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.reflection-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.reflection-image img {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  object-fit: contain;
+}
+
+.idea-framework h2 {
+  font-size: 32px;
+  margin: 0 0 28px;
+}
+
+.idea-item {
+  padding: 0 0 20px 18px;
+  margin-bottom: 20px;
+  border-left: 3px solid #789dd1;
+}
+
+.idea-item h3 {
+  color: #075473;
+  font-size: 21px;
+  margin: 0 0 8px;
+}
+
+.idea-item p {
+  color: #556f7e;
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .reflection-section {
+    padding: 55px 20px;
+  }
+
+  .reflection-intro {
+    margin-bottom: 35px;
+  }
+
+  .reflection-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .reflection-image img {
+    max-width: 420px;
+  }
+
+  .idea-framework h2 {
+    font-size: 28px;
+  }
+}
