@@ -203,3 +203,233 @@
     font-size: 28px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+  --dark-ocean-blue: #0B4A6B;
+  --ocean-blue: #6E9ED6;
+  --steel-blue: #8FB3CE;
+  --light-blue: #C9D9EB;
+  --ice-white: #EEF3F8;
+}
+
+/* Main page background */
+body {
+  background-color: var(--ice-white);
+}
+
+/* Navbar and footer */
+header,
+footer {
+  background-color: var(--dark-ocean-blue);
+}
+
+/* Links and buttons */
+a {
+  color: var(--ocean-blue);
+}
+
+button {
+  background-color: var(--ocean-blue);
+}
+
+/* Cards and borders */
+.card {
+  border-color: var(--steel-blue);
+}
+
+/* Light sections */
+.light-section {
+  background-color: var(--light-blue);
+}
+
+
+
+
+
+
+
+
+
+/* Fix paragraph width and wrapping */
+
+.chapter-description {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0 0 45px 0;
+  padding: 0;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.chapter-description p {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0 0 18px 0;
+  padding: 0;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: normal;
+  line-height: 1.7;
+  box-sizing: border-box;
+}
+
+
+
+
+
+/* Fix Stages Description Width */
+
+.chapter-hero {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.chapter-hero .wrap {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+.chapter-description {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0 0 40px;
+  padding: 0;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.chapter-description p {
+  display: block;
+  width: 100%;
+  max-width: none !important;
+  margin: 0 0 18px;
+  padding: 0;
+  text-align: left;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: normal;
+  line-height: 1.7;
+  box-sizing: border-box;
+}
+
+/* Prevent narrow paragraph width on mobile */
+@media (max-width: 768px) {
+  .chapter-description,
+  .chapter-description p {
+    width: 100%;
+    max-width: none !important;
+  }
+}
+
+
+
+
+
+/* next */
+
+/* FINAL STAGES LAYOUT FIX */
+.stages-timeline {
+  width: 100%;
+  max-width: none;
+  margin: 55px 0 60px;
+  padding: 20px 0 10px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  box-sizing: border-box;
+}
+
+.stage-card {
+  min-width: 0;
+  width: 100%;
+}
+
+.stage-content {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .stages-timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  .stages-timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px 12px;
+  }
+
+  .stage-content {
+    padding: 15px 10px;
+  }
+
+  .stage-content h3 {
+    font-size: 12px;
+  }
+
+  .stage-content li {
+    font-size: 9px;
+  }
+}
+
+
+
+/* STAGES PAGE ONLY */
+#main .chapter-hero p,
+#main .reflection-section p,
+#main .article-content p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+#main .chapter-hero a,
+#main .reflection-section a,
+#main .article-content a {
+  font-size: inherit;
+}
+
+#main .article-content li {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  #main .chapter-hero p,
+  #main .reflection-section p,
+  #main .article-content p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  #main .article-content li {
+    font-size: 15px;
+  }
+}

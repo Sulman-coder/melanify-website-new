@@ -1,871 +1,1668 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#075473">
-    <meta name="description" content="MELANIFY explores a biological pathway from PET plastic waste to allomelanin. Discover our engineering, research and community work.">
-    <title>Project description | MELANIFY</title>
+    <meta name="description"
+        content="MELANIFY explores a biological pathway from PET plastic waste to allomelanin. Discover our engineering, research and community work.">
+    <title>Integrated human practices | MELANIFY</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="css/project.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="css/common-typography.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
     <script src="script.js" defer=""></script>
+    <!-- <link rel="stylesheet" href="/css/project.css"> -->
+    <!-- <link rel="stylesheet" href="/css/human-pratices1.css"> -->
+    <!-- <link rel="stylesheet" href="/css/human-pratices.css"> -->
+    <link rel="stylesheet" href="/home.css">
+    <link rel="stylesheet" href="/css/common-typography.css">
+    <link rel="stylesheet" href="css/sec.css">
+    <link rel="stylesheet" href="css/hird.css">
+
+
 
     <style>
-
-   /* GLOBAL BOX SIZING */
-
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+        /* GLOBAL BOX SIZING */
 
 
-   /* NAVIGATION INDICATORS */
-
-.nav-indicator {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 16px;
-  height: 16px;
-  min-width: 16px;
-  flex: 0 0 16px;
-  background-color: #f28c28;
-  border-radius: 2px;
-}
-
-
-   /* BRAND / LOGO */
-
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-width: 0;
-  max-width: 100%;
-}
-
-.brand-logo {
-  display: block;
-  width: 80px;
-  height: 80px;
-  max-width: 100%;
-  flex: 0 0 auto;
-  object-fit: contain;
-  margin: 0;
-}
-
-
-   /* MAIN TAB INDICATOR */
-
-
-.nav-main::before {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 6px;
-  background-color: #ffffff;
-  border-radius: 50%;
-}
-
-
-   /* DROPDOWN INDICATOR */
-
-
-.nav-dropdown-icon::before {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 6px;
-  border-right: 1.5px solid #ffffff;
-  border-bottom: 1.5px solid #ffffff;
-  transform: translateY(-2px) rotate(45deg);
-}
-
-
-   /* NAVIGATION LAYOUT */
-
-
-#main-nav {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px 12px;
-  max-width: 100%;
-}
-
-#main-nav > a.main-tab,
-#main-nav .nav-group > summary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-width: 0;
-  max-width: 100%;
-  line-height: 1.5;
-}
-
-/* Main navigation links */
-
-#main-nav > a {
-  overflow-wrap: anywhere;
-}
-
-   /* SECTION HEADING */
-
-
-.story-section .section-heading h2 {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto 16px;
-  font-size: clamp(28px, 3.2vw, 42px);
-  line-height: 1.2;
-  text-align: center;
-  white-space: normal;
-  overflow-wrap: break-word;
-  text-wrap: balance;
-}
-
-
-   /* TABLET RESPONSIVE */
-
-
-@media (max-width: 900px) {
-  .brand-logo {
-    width: 36px;
-    height: 36px;
-  }
-
-  #main-nav {
-    gap: 8px 10px;
-  }
-
-  #main-nav > a.main-tab,
-  #main-nav .nav-group > summary {
-    gap: 6px;
-    font-size: 14px;
-  }
-
-  .story-section .section-heading h2 {
-    font-size: clamp(27px, 4vw, 36px);
-  }
-}
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
 
 
 
+        /* sidebar */
 
-@media (max-width: 600px) {
-  .brand {
-    gap: 6px;
-  }
+        .article-sidebar {
+            position: sticky;
+            top: 100px;
+            align-self: start;
+            height: fit-content;
+        }
 
-  .brand-logo {
-    width: 32px;
-    height: 32px;
-  }
+        .toc-sticky {
+            position: sticky;
+            top: 100px;
+        }
 
-  #main-nav {
-    /* width: 100%;
-    gap: 8px; */
-    display: none;
-  }
-
-  #main-nav > a.main-tab,
-  #main-nav .nav-group > summary {
-    font-size: 13px;
-    gap: 6px;
-  }
-
-  #main-nav > a::before,
-  #main-nav .nav-group > summary::before {
-    width: 14px;
-    height: 14px;
-    min-width: 14px;
-    flex-basis: 14px;
-  }
-
-  #main-nav .nav-group > summary::before {
-    background-size: 11px;
-  }
-
-  .story-section .section-heading h2 {
-    width: 100%;
-    font-size: clamp(26px, 6.5vw, 34px);
-    line-height: 1.25;
-    text-align: left;
-    white-space: normal;
-    text-wrap: wrap;
-  }
-}
+        .article-layout {
+            align-items: start;
+        }
 
 
-   /* SMALL MOBILE */
+        /* SECTION HEADING */
 
 
-@media (max-width: 360px) {
-  .brand-logo {
-    width: 28px;
-    height: 28px;
-  }
-
-  #main-nav {
-    gap: 6px;
-  }
-
-  #main-nav > a.main-tab,
-  #main-nav .nav-group > summary {
-    font-size: 12px;
-  
-  }
-
-  .story-section .section-heading h2 {
-    font-size: 26px;
-  }
-}
+        .story-section .section-heading h2 {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 16px;
+            font-size: clamp(28px, 3.2vw, 42px);
+            line-height: 1.2;
+            text-align: center;
+            white-space: normal;
+            overflow-wrap: break-word;
+            text-wrap: balance;
+        }
 
 
-   /* REDUCED MOTION ACCESSIBILITY */
+        /* stage content */
+        .stage-content {
+            min-height: 280px !important;
+            padding: 20px 14px 22px !important;
+            border-radius: 18px !important;
+        }
+
+        .stage-content h3 {
+            font-size: 18px !important;
+            line-height: 1.15 !important;
+            margin-bottom: 14px !important;
+            letter-spacing: -0.4px !important;
+        }
 
 
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-</style>
+        /* Bigger List Text */
+        .stage-content li {
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 4px;
+        }
+
+        /* Bigger Stage Numbers */
+        .stage-number {
+            font-size: 29px;
+        }
 
 
-  </head>
-  <body data-page="description">
+        /* ===== FIX STAGE CARDS RESPONSIVENESS ===== */
+
+        /* Tablet and Desktop */
+        .stages-timeline {
+            width: 100%;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+            box-sizing: border-box;
+        }
+
+        .stage-card {
+            min-width: 0;
+        }
+
+        .stage-content {
+            box-sizing: border-box;
+            width: 100%;
+            min-height: 210px;
+            padding: 18px 12px;
+        }
+
+        .stage-content h3 {
+            font-size: 14px;
+            line-height: 1.15;
+            overflow-wrap: break-word;
+        }
+
+        .stage-content ul {
+            padding-left: 12px;
+        }
+
+        .stage-content li {
+            font-size: 10px;
+            line-height: 1.5;
+            overflow-wrap: anywhere;
+        }
+
+        /* =====================================
+   TABLET
+===================================== */
+
+        @media (max-width: 900px) {
+            .reflection-container {
+                padding-right: 25px;
+                padding-left: 25px;
+            }
+
+            .reflection-content {
+                gap: 22px;
+            }
+        }
+
+        /* =====================================
+   MOBILE
+===================================== */
+
+        @media (max-width: 600px) {
+            .reflection-section {
+                padding: 30px 0 40px;
+            }
+
+            .reflection-container {
+                padding-right: 18px;
+                padding-left: 18px;
+            }
+
+            .reflection-content {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 28px;
+            }
+
+            .reflection-image,
+            .idea-framework {
+                width: 100%;
+            }
+
+            .reflection-intro {
+                margin-bottom: 25px;
+            }
+        }
+
+
+
+
+
+
+        /* Mobile: Two columns */
+        @media (max-width: 520px) {
+            .stages-timeline {
+                width: 100%;
+                max-width: 440px;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 38px 14px;
+                margin: 40px auto;
+                padding: 12px 8px;
+            }
+
+            .stage-card {
+                width: 100%;
+                padding-top: 27px;
+            }
+
+            .stage-1 .stage-content,
+            .stage-2 .stage-content,
+            .stage-3 .stage-content,
+            .stage-4 .stage-content {
+                margin-top: 0;
+            }
+
+            .stage-number,
+            .stage-2 .stage-number,
+            .stage-4 .stage-number {
+                top: 0;
+                bottom: auto;
+                transform: none;
+                font-size: 25px;
+            }
+
+            .stage-content {
+                width: 100%;
+                min-height: 205px;
+                height: auto;
+                padding: 16px 10px;
+                border-radius: 15px;
+            }
+
+            .stage-content h3 {
+                font-size: 12px;
+                line-height: 1.2;
+                margin-bottom: 12px;
+            }
+
+            .stage-content li {
+                font-size: 9px;
+                line-height: 1.45;
+                margin-bottom: 4px;
+            }
+        }
+
+        /* Very small phones: One column */
+        @media (max-width: 360px) {
+            .stages-timeline {
+                max-width: 300px;
+                grid-template-columns: minmax(0, 1fr);
+                gap: 30px;
+                padding-inline: 10px;
+            }
+
+            .stage-content {
+                min-height: auto;
+                padding: 20px 16px;
+            }
+
+            .stage-content h3 {
+                font-size: 15px;
+            }
+
+            .stage-content li {
+                font-size: 11px;
+                line-height: 1.6;
+            }
+        }
+
+
+        /* TABLET RESPONSIVE */
+
+
+        @media (max-width: 900px) {
+
+            .story-section .section-heading h2 {
+                font-size: clamp(27px, 4vw, 36px);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+
+    <style>
+        /* STAGES PAGE LAYOUT */
+        #main .article-layout {
+            display: grid;
+            grid-template-columns: 220px minmax(0, 1fr);
+            align-items: start;
+            gap: 30px;
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 25px 20px;
+        }
+
+        /* LEFT SIDEBAR */
+        #main .article-sidebar {
+            min-width: 0;
+            align-self: stretch;
+        }
+
+        #main .toc-sticky {
+            position: sticky;
+            top: 105px;
+            padding: 18px 12px;
+            background: var(--ice);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+        }
+
+        #main .toc {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        #main .toc a {
+            display: block;
+            padding: 9px 10px;
+            color: var(--ink);
+            font-size: 15px !important;
+            line-height: 1.5;
+            border-radius: 6px;
+        }
+
+        #main .toc a:hover {
+            background: var(--pale);
+            color: var(--ocean);
+        }
+
+        /* RIGHT SIDE SECTIONS */
+        #main .chapter-hero,
+        #main .reflection-section,
+        #main .article-content {
+            min-width: 0;
+            width: 100%;
+        }
+
+        #main .chapter-hero>.wrap {
+            width: 100%;
+            max-width: none;
+            margin: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            #main .article-layout {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 20px;
+                padding: 15px;
+            }
+
+            #main .toc-sticky {
+                position: static;
+            }
+
+            #main .toc {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            #main .toc a {
+                padding: 7px 9px;
+            }
+        }
+    </style>
+
+</head>
+
+<body data-page="human-practices">
     <a class="skip-link" href="#main">Skip to content</a>
-   
 
-      <header class="site-header">
+    <header class="site-header">
 
-  <div class="header-inner">
+        <div class="header-inner">
 
-    <!-- Logo Image -->
-    <a class="brand" href="index.html" aria-label="MELANIFY home">
-        <!-- <span>MELANIFY<span class="brand-period">.</span></span> -->
-      <img src="logo-removebg-preview.png" alt="MELANIFY Logo" class="brand-logo">
-    </a>
+            <!-- Logo Image -->
+            <a class="brand" href="index.html" aria-label="MELANIFY home">
+                <!-- <span>MELANIFY<span class="brand-period">.</span></span> -->
+                <img src="logo-removebg-preview.png" alt="MELANIFY Logo" class="brand-logo">
+            </a>
 
-    
-    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
-      <span></span>
-      <span></span>
-      <span class="sr-only">Toggle navigation</span>
-    </button>
+            <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
+                aria-controls="main-nav">
 
-    <nav id="main-nav" aria-label="Main navigation">
+                <span class="hamburger-icon" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
 
-      <!-- Home -->
-      <a href="index.html" aria-current="page">Home</a>
+                <!-- <span class="sr-only">Toggle navigation</span> -->
 
-      <!-- Project -->
-      <details class="nav-group">
-        <summary>Project<span class="chevron"></span></summary>
-        <div class="nav-dropdown">
-          <a href="description.html">Description: Problem Breakdown</a>
-          <a href="proposed-pathway.html">Proposed Pathway</a>
+            </button>
+
+            <nav id="main-nav" aria-label="Main navigation">
+
+                <!-- Home -->
+                <a href="index.html" aria-current="page">Home</a>
+
+                <!-- Project -->
+                <details class="nav-group">
+                    <summary>Project<span class="chevron"></span></summary>
+                    <div class="nav-dropdown">
+                        <a href="description.html">Description: Problem Breakdown</a>
+                        <!-- <a href="proposed-pathway.html">Proposed Pathway</a> -->
+                    </div>
+                </details>
+
+                <!-- Wet Lab -->
+                <details class="nav-group">
+                    <summary>Wet Lab<span class="chevron"></span></summary>
+                    <div class="nav-dropdown">
+                        <a href="engineering.html">Engineering</a>
+                        <a href="results.html">Results</a>
+                        <a href="protocols.html">Protocols &amp; Notebook</a>
+                        <a href="safety.html">Safety</a>
+                    </div>
+                </details>
+
+                <!-- Beyond the Lab -->
+                <details class="nav-group">
+                    <summary>Beyond the Lab<span class="chevron"></span></summary>
+                    <div class="nav-dropdown">
+                        <a href="human-practices.html">Integrated Human Practices</a>
+                        <a href="education.html">Education</a>
+                        <a href="entrepreneurship.html">Entrepreneurship</a>
+                    </div>
+                </details>
+
+                <!-- Team -->
+                <details class="nav-group">
+                    <summary>Team<span class="chevron"></span></summary>
+                    <div class="nav-dropdown">
+                        <a href="members.html">Members</a>
+                        <a href="attributions.html">Attributions</a>
+                    </div>
+                </details>
+
+            </nav>
+
+
         </div>
-      </details>
 
-      <!-- Wet Lab -->
-      <details class="nav-group">
-        <summary>Wet Lab<span class="chevron"></span></summary>
-        <div class="nav-dropdown">
-          <a href="engineering.html">Engineering</a>
-          <a href="results.html">Results</a>
-          <a href="protocols.html">Protocols &amp; Notebook</a>
-          <a href="safety.html">Safety</a>
-        </div>
-      </details>
+        <div class="reading-progress" aria-hidden="true"></div>
 
-      <!-- Beyond the Lab -->
-      <details class="nav-group">
-        <summary>Beyond the Lab<span class="chevron"></span></summary>
-        <div class="nav-dropdown">
-          <a href="human-practices.html">Integrated Human Practices</a>
-          <a href="education.html">Education</a>
-          <a href="entrepreneurship.html">Entrepreneurship</a>
-        </div>
-      </details>
-
-      <!-- Team -->
-      <details class="nav-group">
-        <summary>Team<span class="chevron"></span></summary>
-        <div class="nav-dropdown">
-          <a href="members.html">Members</a>
-          <a href="attributions.html">Attributions</a>
-        </div>
-      </details>
-
-    </nav>
-
-   
-  </div>
-
-  <div class="reading-progress" aria-hidden="true"></div>
-
-</header>
+    </header>
     <main id="main">
-      
-<!-- Project Description Section -->
-<section class="chapter-hero" id="top">
-  <div class="wrap">
 
-    <div class="chapter-description">
-      <h1>
-        What if our greatest pollutant protected our most fragile ecosystem?
-      </h1>
+        <div class="article-layout wrap">
 
-      <p>
-        Waste management and marine conservation have historically existed in different realms. Coral bleaching is viewed as a chemical and climate problem, whereas plastic pollution is viewed as a failure of urban infrastructure.
-      </p>
+            <!-- LEFT SIDEBAR -->
+            <aside class="article-sidebar">
+                <div class="toc-sticky">
+                    <span class="small-label">ON THIS PAGE</span>
 
-      <p>
-        These two crises are located in the same physical location in Thailand. Millions of plastic bottles end up in the Andaman Sea and the Gulf of Thailand each year after washing down municipal rivers. Millions of beachgoers lather on chemical sunscreens that directly drain into fragile coral systems along the same beaches.
-      </p>
+                    <nav class="toc" aria-label="Chapter contents">
+                        <a class="toc-primary" href="#top">
+                           Abstract
+                        </a>
 
-      <p>
-        MELANIFY connects these two problems directly.
-      </p>
+                        <a class="toc-primary" href="#our-why">
+                           Our Why
+                        </a>
 
-      <p>
-        Post-consumer plastic should not be disposed of like trash in a landfill. We see polyethylene terephthalate (PET) as an unexplored carbon mine with negative costs. We use synthetic biology to transform this enduring environmental burden into allomelanin, a highly effective, dark-pigmented, completely biodegradable UV barrier designed by nature to absorb intense sun radiation.
-      </p>
+                        <a class="toc-primary" href="#solution">
+                            Current Solution
+                        </a>
 
-      <p>
-        We do more than just recycle. We are biologically upcycling, transforming yesterday's plastic waste into tomorrow's reef-safe protector.
-      </p>
+                        <a class="toc-primary" href="#our-solution">
+                            Our Solution
+                        </a>
+
+                         <a class="toc-primary" href="#implications">
+                           Future Implications
+                        </a>
+
+                        <a class="toc-primary" href="#references">
+                            References
+                        </a>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- RIGHT SIDE: ALL PAGE SECTIONS -->
+            <div class="article-main">
+
+                <section class="chapter-hero" id="top">
+                    <div class="wrap">
+
+                        <div class="chapter-description">
+                            <h1>Abstract</h1>
+                            <p>
+                                Polyethylene terephthalate (PET) plastic is heavily utilized in global single-serve
+                                beverage packaging [1], resulting in an estimated
+                                500 billion to 1 trillion plastic bottles consumed globally each year [2]. Because PET
+                                plastic takes up to 500 years to degrade, the
+                                vast majority of this non-biodegradable waste accumulates in landfills and marine
+                                environments [1, 2]. Concurrently, human populations
+                                are exposed to solar ultraviolet (UV) radiation, which is carcinogenic and the leading
+                                cause of skin cancers, cataracts, and cellular
+                                DNA damage [3].
+                            </p>
+                            <p>
+                                Chemical sunscreens are widely used to reduce overexposure; however, active ingredients
+                                such as oxybenzone have been
+                                linked to documented human safety risks such as skin irritation, contact dermatitis, and
+                                endocrine disruption [4, 5], as well as severe
+                                degradation of marine ecosystems through coral bleaching and toxic accumulation [4, 5].
+                                We aim to bridge these dual challenges by
+                                converting post-consumer PET plastic waste into allomelanin, a biocompatible,
+                                broad-spectrum UV-protective biopolymer.
+                            </p>
+
+
+                        </div>
+
+                        <!-- story -->
+
+                        <div class="thailand-story-inner" id="our-why">
+                            <h1>Our Why</h1>
+
+
+                            <div class="thailand-story-image">
+                                <img src="images/bangkok.jpg"
+                                    alt="Thailand's tropical coastline illustrating plastic pollution and intense sunlight"
+                                    loading="lazy">
+                                <span class="image-label">THAILAND · OUR MOTIVATION</span>
+                            </div>
+
+                            <div class="thailand-story-content">
+                                <!-- <span class="story-eyebrow">WHY MELANIFY MATTERS</span> -->
+                                <h3>WHY MELANIFY MATTERS</h3>
+
+
+                                <p>
+                                    As young researchers living in Thailand, we witness the dual
+                                    threats of extreme environmental degradation and significant
+                                    health risks every day. Our country is at a critical crossroads:
+                                    our bustling metropolitan centers and rivers are overrun with
+                                    mismanaged plastic garbage, while our tropical position exposes
+                                    millions of citizens and coastal ecosystems to constant, harsh
+                                    ultraviolet radiation.
+                                </p>
+
+                                <p>
+                                    We concluded that the two distinct crises—plastic buildup and UV
+                                    exposure—are inextricably linked. Our project was created not
+                                    only as a laboratory experiment, but also as an urgent response
+                                    to our immediate surroundings, based on localized facts in Thailand.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </section>
+
+
+
+
+                <!-- Problems -->
+
+                <section class="problem-section" id="project-problems">
+                    <div class="problem-container">
+
+                        <!-- LEFT: TWO INDEPENDENT ACCORDIONS -->
+                        <div class="problem-left">
+
+                            <div class="problem-heading">
+                                <span class="eyebrow">UNDERSTANDING THE CHALLENGE</span>
+                                <h2>Two connected problems.<br><em>One opportunity.</em></h2>
+                            </div>
+
+                            <!-- DROPDOWN 1: PLASTIC POLLUTION -->
+                            <article class="problem-item is-active">
+
+                                <button class="problem-toggle" type="button" aria-expanded="true"
+                                    aria-controls="problem-panel-1" data-image="0">
+                                    <span class="problem-title">Plastic Pollution in Thailand</span>
+                                    <span class="problem-icon" aria-hidden="true">−</span>
+                                </button>
+
+                                <div class="problem-panel" id="problem-panel-1">
+                                    <div class="problem-panel-inner">
+                                        <p>
+                                            Despite a reported 88.8% municipal waste collection rate,
+                                            Thailand generates an estimated 428 kilotons of mismanaged
+                                            plastic waste annually due to collection gaps and unsanitary
+                                            disposal facilities [7]. While rural areas produce 70.1% of
+                                            the waste exposed to environmental wash-off, extreme urban
+                                            density makes Bangkok a critical leakage point [7]. Within
+                                            Thailand's high-priority river catchments, just 10 districts
+                                            in and around Bangkok account for 51.7% of all exposed
+                                            mismanaged plastic [7]. Massive volumes of this uncollected
+                                            waste are dumped directly into waterways like the Chao Phraya
+                                            River [7]. Once in the river system, 47.6% of this plastic
+                                            inevitably flows into the ocean, resulting in an average
+                                            marine discharge of 9.3 kilotons annually [7]. This figure
+                                            surges to 14.3 kilotons during the rainy season, heavily
+                                            contaminating vulnerable coastal ecosystems [7].
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </article>
+
+                            <!-- DROPDOWN 2: UV RADIATION -->
+                            <article class="problem-item">
+
+                                <button class="problem-toggle" type="button" aria-expanded="false"
+                                    aria-controls="problem-panel-2" data-image="1">
+                                    <span class="problem-title">The UV Radiation in Thailand</span>
+                                    <span class="problem-icon" aria-hidden="true">+</span>
+                                </button>
+
+                                <div class="problem-panel" id="problem-panel-2" hidden>
+                                    <div class="problem-panel-inner">
+
+                                        <p>
+                                            Thailand endures severe year-round solar radiation, with the
+                                            national UV index averaging 11 and 12 annually and surging to
+                                            extreme levels between 13 and 14 (see Figure 1) across the
+                                            country during the March hot season [8, 10]. Across major
+                                            provinces like Bangkok and Phuket, a mere 15 to 20 minutes
+                                            of midday exposure triggers acute sunburn [10]. The World
+                                            Health Organization classifies this intense ultraviolet
+                                            radiation as a direct carcinogen that damages cellular DNA,
+                                            inflames skin, and weakens immunity [9]. Over time, chronic
+                                            exposure leads to severe health conditions, including
+                                            cataracts, premature skin aging, and life-threatening skin
+                                            cancers [9]. Because global health guidelines mandate sun
+                                            protection at a UV index of 3 or above [9], Thailand’s
+                                            extreme solar radiation levels make daily broad-spectrum
+                                            sunscreen application an essential health requirement for
+                                            millions of outdoor workers and residents.
+                                        </p>
+
+
+                                        <figure class="problem-image is-visible">
+                                            <img src="assets/figure-4-4.webp"
+                                                alt="MELANIFY project showing plastic pollution and marine conservation"
+                                                loading="lazy">
+
+                                            <figcaption>
+                                                Figure 1: UV Index Map of Thailand in March 2026 [8]
+                                            </figcaption>
+                                        </figure>
+
+
+                                    </div>
+                                </div>
+
+                            </article>
+
+                        </div>
+
+                        <!-- RIGHT: EXISTING PROJECT IMAGE -->
+                        <aside class="problem-visual" aria-label="Project problem image">
+
+                            <figure class="problem-image is-visible">
+                                <img src="images/kelvin.jpg"
+                                    alt="MELANIFY project showing plastic pollution and marine conservation"
+                                    loading="lazy">
+
+                                <figcaption>
+                                    <span>MELANIFY</span>
+                                    Plastic waste. A new possibility.
+                                </figcaption>
+                            </figure>
+
+                        </aside>
+
+                    </div>
+                </section>
+
+
+
+                <section class="problem-section2" id="project-problems2">
+                    <div class="problem-container">
+
+                        <!-- LEFT: TWO INDEPENDENT ACCORDIONS -->
+                        <div class="problem-left">
+
+                            <div class="problem-heading">
+                                <!-- <span class="eyebrow">UNDERSTANDING THE CHALLENGE</span> -->
+                                <h2>So, how is this issue<br><em>being solved right now?.</em></h2>
+                            </div>
+
+                            <!-- DROPDOWN 2: UV RADIATION -->
+                            <article class="problem-item">
+
+                                <div class="problem-panel" id="problem-panel-2" hidden>
+                                    <div class="problem-panel-inner">
+
+                                        <p>
+
+
+                                            Under extreme UV levels, millions of residents and tourists across Thailand
+                                            require daily sun protection, and society has relied almost entirely on
+                                            synthetic chemical sunscreens. However, these contemporary sunscreens come
+                                            with several hidden costs that may be detrimental to both humans and the
+                                            environment.
+
+                                        </p>
+
+
+                                    </div>
+                                </div>
+
+                            </article>
+
+                        </div>
+
+                        <!-- RIGHT: EXISTING PROJECT IMAGE -->
+                        <aside class="problem-visual" aria-label="Project problem image">
+
+                            <figure class="problem-image is-visible">
+                                <img src="images/sunscreen.jpg"
+                                    alt="MELANIFY project showing plastic pollution and marine conservation"
+                                    loading="lazy">
+
+                        </aside>
+
+                    </div>
+
+
+                    <!-- FULL-WIDTH TEXT BELOW IMAGE AND LEFT CONTENT -->
+                    <div class="problem-section2-extra" id="solution">
+
+                        <p>
+                            While alternative <strong>mineral sunscreens</strong> (zinc oxide and
+                            titanium dioxide) have gained popularity, they frequently leave an
+                            undesirable chalky white cast on skin, contain nano-particles with
+                            unverified long-term aquatic toxicity, and do nothing to address our
+                            global plastic crisis [11, 12].
+                        </p>
+
+                        <h3>Current Solutions</h3>
+
+                        <p>
+                            To shield human skin from UV radiation, commercial manufacturers rely
+                           heavily on synthetic UV filters like oxybenzone, octinoxate, and 
+                           octocrylene [11, 12, 13, 14]. While effective at absorbing radiation,
+                           these chemical formulations create significant health and environmental
+                           hazards. 
+
+                        </p>
+
+                        <p>
+                          
+                        </p>
+                             <h4>1. Human Health Side Effects</h4>
+
+                        <p class="solution-illustration-description">
+                            <em>
+                        Oxybenzone penetrates the dermal barrier into the bloodstream, acting as
+                        an endocrine disruptor linked to hormonal imbalances, skin irritation, and
+                        contact dermatitis [12, 14]. 
+                            </em>
+                        </p>
+
+                             <h4>2. Marine Degradation & Aquatic Toxicity</h4>
+
+                        <p>
+                          Over 14,000 tons of sunscreen wash into oceans annually, triggering
+                         coral bleaching, larval DNA damage, and toxic tissue breakdown in 
+                         aquatic wildlife [11, 13, 14]. 
+
+                        </p>
+
+                        
+                             <h4>Strict Legal Enforcement</h4>
+
+                        <p>
+                          To combat reef collapse, Thailand’s Department of National Parks
+                         has banned harmful UV filters across all marine national parks, 
+                         punishing violations with fines up to 100,000 THB [15]. 
+
+                        </p>
+
+                        <p>
+                        While alternative mineral sunscreens (zinc oxide and titanium dioxide)
+                       have gained popularity, they frequently leave an undesirable chalky white
+                       cast on skin, contain nano-particles with unverified long-term aquatic 
+                       toxicity, and do nothing to address our global plastic crisis [11, 12]. 
+
+                        </p>
+                    </div>
+
+
+                    <!-- Additional text below the left text and right image -->
+                    <div class="problem-section2-extra" id="our-solution">
+
+                        <p>
+                            While alternative <strong>mineral sunscreens</strong> (zinc oxide and
+                            titanium dioxide) have gained popularity, they frequently leave an
+                            undesirable chalky white cast on skin, contain nano-particles with
+                            unverified long-term aquatic toxicity, and do nothing to address our
+                            global plastic crisis [11, 12].
+                        </p>
+
+                        <h3>Our Solution</h3>
+
+                        <p>
+                            To address the dual challenges of PET plastic pollution and toxic
+                            chemical sunscreens, we engineered <strong>MELANIFY</strong>, a
+                            circular synthetic biology platform that converts post-consumer
+                            plastic waste into <strong>allomelanin</strong>, a sustainable,
+                            broad-spectrum UV-protective biopolymer.
+                        </p>
+
+                        <p>
+                            Before engineering an enzymatic pathway, we selected our target
+                            molecule based on its structural, photoprotective, and ecological
+                            properties [16, 17, 18, 19]. Unlike human skin pigments (eumelanin
+                            and pheomelanin), which require nitrogenous precursors like L-tyrosine,
+                            <strong>allomelanin</strong> is a class of nitrogen-free melanin
+                            synthesized from aromatic catechol compounds commonly produced by
+                            fungi and plants [18].
+                        </p>
+
+                        <p class="solution-illustration-description">
+                            <em>
+                                This target molecule is depicted in the illustration below, where the
+                                luminous ocean-blue core symbolizes MELANIFY's dedication to marine
+                                life by offering potent UV defense that is completely safe for coral
+                                reefs and ocean ecosystems. Radiating dark charcoal shards represent
+                                the aggregated biopolymer network that absorbs harmful solar rays.
+                            </em>
+                        </p>
+
+                    </div>
+                </section>
+
+
+
+<section class="melanify-page">
+
+  <!-- Main heading -->
+  <div class="section-heading" id="">
+    <span class="section-label">MELANIFY · SUSTAINABLE BIOPIGMENT</span>
+    <h2>Meet Allomelanin: Nature’s Reef-Safe Shield</h2>
+  </div>
+
+  <!-- Four-branch infographic -->
+  <div class="shield-layout">
+
+    <!-- Card 1: Top -->
+    <article class="shield-card card-top">
+      <span class="card-number">01</span>
+      <h3>Broad-Spectrum Light Shielding</h3>
+      <h4>Full-Spectrum Protection</h4>
+      <p>Its densely conjugated aromatic matrix provides continuous light attenuation across the UVA, UVB, and UVC spectra [16, 17, 19].</p>
+      <h4>High Photostability</h4>
+      <p>Absorbs solar radiation over extended periods without photodegrading or breaking down into hazardous fragments [16, 19].</p>
+    </article>
+
+    <!-- Card 2: Left -->
+    <article class="shield-card card-left">
+      <span class="card-number">02</span>
+      <h3>Nitrogen-Free Chemical Backbone</h3>
+      <h4>Bioconversion Alignment</h4>
+      <p>Derived from catecholate precursors rather than nitrogenous amino acids like L-tyrosine [18].</p>
+      <h4>Circular Synthesis</h4>
+      <p>Enables direct, low-cost biosynthesis downstream of PET monomer degradation (TPA → PCA → Catechol) [18].</p>
+    </article>
+
+    <!-- Center image -->
+    <div class="shield-center">
+      <img
+        src="images/allomelanin.jpg"
+        alt="Allomelanin light shielding, antioxidant activity, and marine safety infographic"
+        class="shield-image"
+      >
     </div>
 
+    <!-- Card 3: Right -->
+    <article class="shield-card card-right">
+      <span class="card-number">03</span>
+      <h3>Potent Antioxidant &amp; ROS Scavenging</h3>
+      <h4>Cellular Defense</h4>
+      <p>Actively quenches damaging Reactive Oxygen Species (ROS) induced by UV exposure, helping prevent dermal oxidative stress and inflammation [16, 17, 19].</p>
+      <h4>Safe Quenching</h4>
+      <p>Neutralizes free radicals without generating reactive secondary intermediates [16, 17].</p>
+    </article>
+
+    <!-- Card 4: Bottom -->
+    <article class="shield-card card-bottom">
+      <span class="card-number">04</span>
+      <h3>Marine Biocompatibility &amp; Coral Safety</h3>
+      <h4>Marine Compatibility</h4>
+      <p>Designed around the goal of avoiding the marine toxicity associated with certain synthetic organic UV filters [16–19].</p>
+      <h4>Biodegradation</h4>
+      <p>Investigates the potential for naturally derived pigment to break down in coastal marine ecosystems [16, 18, 19].</p>
+    </article>
+
   </div>
+
+  <!-- Engineering section -->
+  <section class="engineering-section">
+    <span class="section-label">OUR APPROACH</span>
+    <h2>Engineering Strategy: Dual-Host Division of Labor</h2>
+
+    <p class="engineering-intro">
+      Building a whole metabolic pathway from a complicated polymer (PET)
+      to a polymerized pigment (allomelanin) within a single microbial host
+      results in metabolic strain, severe cellular toxicity, and enzyme
+      expression bottlenecks. MELANIFY uses a dual-host approach to address
+      this, splitting the metabolic load between two specialized chassis:
+    </p>
+
+    <div class="host-grid">
+
+      <article class="host-card">
+        <span class="host-number">01</span>
+        <h3><em>Pichia pastoris</em></h3>
+        <span class="host-type">Secretory Host</span>
+        <p>
+          Utilized for high-density extracellular enzyme secretion, breaking
+          down solid PET plastic outside the cell without requiring cell lysis.
+        </p>
+      </article>
+
+      <article class="host-card">
+        <span class="host-number">02</span>
+        <h3><em>Escherichia coli</em></h3>
+        <span class="host-type">Bioconversion Host</span>
+        <p>
+          Expresses membrane-displayed enzymes, intracellular metabolic
+          operons, and export transporters to import PET monomers and convert
+          them into catechol.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
 </section>
 
 
 
 
 
-<!-- PROBLEMS SECTION -->
-<section class="problem-section" id="project-problems">
-  <div class="problem-container">
 
-    <!-- LEFT: ACCORDION CONTENT -->
-    <div class="problem-left">
+<!-- Biological Pathway Section -->
 
-      <div class="problem-heading">
-        <span class="eyebrow">UNDERSTANDING THE CHALLENGE</span>
-        <h2>Three connected problems.<br><em>One opportunity.</em></h2>
-      </div>
+<section class="melanify-section" id="melanify-pathway">
 
-      
-      <article class="problem-item is-active">
-        <button
-          class="problem-toggle"
-          type="button"
-          aria-expanded="true"
-          aria-controls="problem-panel-1"
-          data-image="0"
-        >
-          <span class="problem-title">Plastic Pollution in Thailand</span>
-          <span class="problem-icon" aria-hidden="true">−</span>
-        </button>
-
-        <div class="problem-panel" id="problem-panel-1">
-          <div class="problem-panel-inner">
-            <p>
-              Despite a reported 88.8% municipal waste collection rate,
-              Thailand generates an estimated 428 kilotons of mismanaged
-              plastic waste annually due to collection gaps and unsanitary
-              disposal facilities [1]. While rural areas produce 70.1% of
-              the waste exposed to environmental wash-off, extreme urban
-              density makes Bangkok a critical leakage point [1]. Within
-              Thailand's high-priority river catchments, just 10 districts
-              in and around Bangkok account for 51.7% of all exposed
-              mismanaged plastic [1]. Massive volumes of this uncollected
-              waste are dumped directly into waterways like the Chao Phraya
-              River [1]. Once in the river system, 47.6% of this plastic
-              inevitably flows into the ocean, resulting in an average
-              marine discharge of 9.3 kilotons annually [1]. This figure
-              surges to 14.3 kilotons during the rainy season, heavily
-              contaminating vulnerable coastal ecosystems [1].
-            </p>
-          </div>
-        </div>
-      </article>
-    
-<!-- ITEM 2 -->
-<article class="problem-item">
-  <button
-    class="problem-toggle"
-    type="button"
-    aria-expanded="false"
-    aria-controls="problem-panel-2"
-    data-image="1"
-  >
-    <span class="problem-title">The UV Radiation in Thailand</span>
-    <span class="problem-icon" aria-hidden="true">+</span>
-  </button>
-
-  <div class="problem-panel" id="problem-panel-2" hidden>
-    <div class="problem-panel-inner">
-
-      <p>
-        Thailand endures severe year-round solar radiation, with the
-        national UV index averaging 11 and 12 annually and surging to
-        extreme levels between 13 and 14 (see Figure 1) across the
-        country during the March hot season [2, 4]. Across major
-        provinces like Bangkok and Phuket, a mere 15 to 20 minutes
-        of midday exposure triggers acute sunburn [4]. The World
-        Health Organization classifies this intense ultraviolet
-        radiation as a direct carcinogen that damages cellular DNA,
-        inflames skin, and weakens immunity [3]. Over time, chronic
-        exposure leads to severe health conditions, including
-        cataracts, premature skin aging, and life-threatening skin
-        cancers [3]. Because global health guidelines mandate sun
-        protection at a UV index of 3 or above [3], Thailand’s
-        extreme solar radiation levels make daily broad-spectrum
-        sunscreen application an essential health requirement for
-        millions of outdoor workers and residents.
-      </p>
-
-      <!-- UV INDEX MAP: INSIDE SECOND ACCORDION -->
-      <figure class="uv-map-figure">
-        <img
-          src="assets/figure-4-4.webp"
-          alt="UV Index Map of Thailand in March 2026"
-          loading="lazy"
-        >
-
-        <figcaption class="problem-reference">
-          Figure 1: UV Index Map of Thailand in March 2026 [2]
-        </figcaption>
-      </figure>
-
-    </div>
-  </div>
-</article>
-
-      <!-- ITEM 3 -->
-      <article class="problem-item">
-        <button
-          class="problem-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="problem-panel-3"
-          data-image="2"
-        >
-          <span class="problem-title">
-            Problem with Contemporary UV Protection
-          </span>
-          <span class="problem-icon" aria-hidden="true">+</span>
-        </button>
-
-        <div class="problem-panel" id="problem-panel-3" hidden>
-          <div class="problem-panel-inner">
-            <p>
-              Commercial sunscreens rely heavily on synthetic UV filters
-              like Benzophenone-3 (oxybenzone) that function as severe
-              marine contaminants [6]. Once washed into coastal waters,
-              oxybenzone becomes highly toxic to marine life, especially
-              under direct sunlight [6]. At concentrations as low as
-              6.5 µg/L, it severely deforms coral larvae by damaging their
-              DNA and forcing them to prematurely develop skeletons, which
-              traps and kills the larvae [6]. This directly triggers
-              widespread coral bleaching, which became so significant
-              that in August 2021, Thailand legally banned sunscreens
-              containing oxybenzone, octinoxate, 4-methylbenzylidene
-              camphor, and butylparaben across all national parks [5].
-              This ban exposes a critical gap in technology: people still
-              need daily protection from intense UV radiation, but the
-              environment can no longer survive the chemical runoff
-              required to provide it.
-            </p>
-          </div>
-        </div>
-      </article>
-
-    </div>
-
-    
-<!-- RIGHT SIDE: SINGLE IMAGE -->
-<aside class="problem-visual" aria-label="Project problem image">
-
-  <figure class="problem-image is-visible">
-    <img
-      src="images/project.png"
-      alt="MELANIFY project showing plastic pollution and marine conservation"
-      loading="lazy"
-    >
-
-    <figcaption>
-      <span>MELANIFY</span>
-      Plastic waste. A new possibility.
-    </figcaption>
-  </figure>
-
-</aside>
-
-  </div>
-</section>
-
-
-
-
-
-<section class="pichia-section" id="meet-pichia">
-  <div class="pichia-container">
+  <div class="melanify-container">
 
     <!-- Introduction -->
-    <p class="pichia-intro">
-      Neither mechanical recycling nor chemical sunscreens can provide
-      a definite answer to repurposing plastic waste or protecting coral reefs.
-      By converting post-consumer PET trash into a natural, reef-safe UV barrier,
-      MELANIFY addresses both crises.
-    </p>
+    <div class="melanify-intro">
+      <p>
+        To address both plastic pollution and reef degradation
+        simultaneously, MELANIFY bridges the gap with a single
+        biological pathway.
+      </p>
+    </div>
 
-    <!-- Heading -->
-    <h2 class="pichia-heading">Meet Pichia pastoris</h2>
+    <!-- Interactive pathway -->
+    <div class="pathway-widget">
 
-    <!-- Diagram -->
-    <div class="pichia-diagram">
-
-      <!-- Connector lines -->
-      <div class="connector connector-tl"></div>
-      <div class="connector connector-tr"></div>
-      <div class="connector connector-bl"></div>
-      <div class="connector connector-br"></div>
-
-      <!-- Top left -->
-      <article class="pichia-card card-tl">
-        <h3>THE PROTEIN FACTORY</h3>
+      <div class="pathway-widget-heading">
+        <span class="pathway-label">INTERACTIVE DIAGRAM</span>
+        <h2>Explore the MELANIFY Pathway</h2>
         <p>
-          <em>Pichia</em> is built to pump out massive amounts of HotPETase,
-          our engineered enzyme that chews up plastic outside the cell.
+          Click any step to explore the biological process
+          and its role in transforming plastic waste.
         </p>
-      </article>
-
-      <!-- Top right -->
-      <article class="pichia-card card-tr">
-        <h3>STABLE &amp; ENGINEERED</h3>
-        <p>
-          We integrated our pathway directly into <em>Pichia</em>’s genome
-          so it reliably expresses the plastic-degrading characteristics.
-        </p>
-      </article>
-
-      <!-- Center image -->
-      <div class="pichia-center">
-        <div class="pichia-image-circle">
-          <img
-            src="images/protein-removebg-preview.png"
-            alt="Illustration of Pichia pastoris"
-          />
-        </div>
       </div>
 
-      <!-- Bottom left -->
-      <article class="pichia-card card-bl">
-        <h3>PLASTIC INTO FEEDSTOCK</h3>
-        <p>
-          HotPETase slices long plastic polymer chains down into soluble
-          pieces (MHET) that the rest of our system can easily process.
-        </p>
-      </article>
+      <!-- Clickable steps -->
+      <div
+        class="pathway-steps"
+        role="group"
+        aria-label="Six steps of the MELANIFY pathway"
+      >
 
-      <!-- Bottom right -->
-      <article class="pichia-card card-br">
-        <h3>BUILT TO SCALE</h3>
-        <p>
-          <em>Pichia</em> grows fast, stays tough, and thrives in standard
-          bioreactors, making large-scale production feasible.
+        <button class="pathway-step active"
+          type="button" data-step="0"
+          aria-pressed="true">
+          <span class="step-number">01</span>
+          <span class="step-name">PET</span>
+        </button>
+
+        <span class="pathway-arrow" aria-hidden="true">→</span>
+
+        <button class="pathway-step"
+          type="button" data-step="1"
+          aria-pressed="false">
+          <span class="step-number">02</span>
+          <span class="step-name">MHET</span>
+        </button>
+
+        <span class="pathway-arrow" aria-hidden="true">→</span>
+
+        <button class="pathway-step"
+          type="button" data-step="2"
+          aria-pressed="false">
+          <span class="step-number">03</span>
+          <span class="step-name">TPA</span>
+        </button>
+
+        <span class="pathway-arrow" aria-hidden="true">→</span>
+
+        <button class="pathway-step"
+          type="button" data-step="3"
+          aria-pressed="false">
+          <span class="step-number">04</span>
+          <span class="step-name">PCA</span>
+        </button>
+
+        <span class="pathway-arrow" aria-hidden="true">→</span>
+
+        <button class="pathway-step"
+          type="button" data-step="4"
+          aria-pressed="false">
+          <span class="step-number">05</span>
+          <span class="step-name">Catechol</span>
+        </button>
+
+        <span class="pathway-arrow" aria-hidden="true">→</span>
+
+        <button class="pathway-step"
+          type="button" data-step="5"
+          aria-pressed="false">
+          <span class="step-number">06</span>
+          <span class="step-name">Allomelanin</span>
+        </button>
+
+      </div>
+
+      <!-- Information panel -->
+      <div
+        class="pathway-info"
+        id="pathway-info"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+
+        <div class="info-topline">
+          <span class="info-dot"></span>
+          <span id="info-header">
+            STEP 01 — STARTING MATERIAL
+          </span>
+        </div>
+
+        <h3 id="info-title">PET Plastic</h3>
+
+        <p id="info-description">
+          Post-consumer polyethylene terephthalate (PET)
+          plastic waste serves as the primary carbon feedstock,
+          transforming a major environmental waste stream into
+          a valuable biological resource.
         </p>
-      </article>
+
+        <div class="info-mechanism">
+          <span class="mechanism-label">
+            BIOLOGICAL TOOL / MECHANISM
+          </span>
+
+          <p id="info-mechanism">
+            Waste Aggregation &amp; Thermal Pre-Conditioning
+          </p>
+        </div>
+
+      </div>
 
     </div>
 
-    <!-- Bottom text -->
-    <p class="pichia-bottom-text">
-      Pichia is just the first step. Dive in to see how our dual-host system
-      converts plastic into reef-safe allomelanin!
-    </p>
+    <!-- Proposed pathway button -->
+    <div class="melanify-action">
+      <a
+        href="proposed-pathway.html"
+        class="melanify-button"
+      >
+        Go to our Proposed Pathway and see the process in detail!
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
 
-    <!-- Button -->
-    <a href="proposed-pathway.html" class="pichia-button">
-      EXPLORE OUR 5-STEP PATHWAY <span aria-hidden="true">→</span>
-    </a>
+
+    
+<!-- Detailed pathway text: add after melanify-action and before closing melanify-container -->
+
+<div class="pathway-details">
+
+  <h2>Step 01: Starting Material: PET Plastic Waste</h2>
+  <ul>
+    <li><strong>Input:</strong> Post-consumer polyethylene terephthalate (PET) bottles and microplastics.</li>
+    <li><strong>Process:</strong> Plastic waste undergoes mechanical/thermal pre-treatment to increase surface area and reduce crystallinity, preparing the polymer chains for biological cleavage.</li>
+    <li><strong>Role in Pathway:</strong> Transforms a persistent marine pollutant into an inexpensive, carbon-rich feedstock.</li>
+  </ul>
+
+  <h2>Step 02: Secreted Enzymatic Cleavage: HotPETase</h2>
+  <ul>
+    <li><strong>Host Organism:</strong> <em>Pichia pastoris</em> (Secretion System)</li>
+    <li><strong>Biological Tool:</strong> HotPETase (thermostable PETase variant)</li>
+    <li><strong>Mechanism:</strong> Engineered <em>P. pastoris</em> secretes HotPETase directly into the culture medium. HotPETase hydrolyzes the ester bonds of insoluble PET polymer, breaking down plastic chains into soluble mono-(2-hydroxyethyl) terephthalate (<strong>MHET</strong>) monomers along with minor fractions of terephthalic acid (TPA) and ethylene glycol.</li>
+  </ul>
+
+  <h2>Step 03: Surface-Displayed Hydrolysis: MHETase</h2>
+  <ul>
+    <li><strong>Host Organism:</strong> <em>E. coli</em> (Surface Display System)</li>
+    <li><strong>Biological Tool:</strong> Surface-anchored MHETase</li>
+    <li><strong>Mechanism:</strong> To prevent intracellular metabolic burden and transport bottlenecks, MHETase is displayed on the outer membrane of <em>E. coli</em>. Membrane-bound MHETase rapidly cleaves the ester linkage in MHET, yielding pure terephthalic acid (<strong>TPA</strong>) and ethylene glycol without requiring substrate uptake into the cell cytoplasm.</li>
+  </ul>
+
+  <h2>Step 04: Intracellular Conversion: TPA → PCA</h2>
+  <ul>
+    <li><strong>Host Organism:</strong> <em>E. coli</em> (Bioconversion Chassis)</li>
+    <li><strong>Biological Tools:</strong> <em>tphA1</em>, <em>tphA2</em>, <em>tphA3</em> (TPA dioxygenase complex) and <em>tphB</em> (1,2-dihydroxy-3,5-cyclohexadiene-1,4-dicarboxylate dehydrogenase)</li>
+    <li><strong>Mechanism:</strong> TPA enters the <em>E. coli</em> cytoplasm through specific transporters. The multi-component TPA dioxygenase system (<em>tphA1A2A3</em>) oxygenates TPA into a dihydrodiol intermediate, which is rapidly oxidized by <em>tphB</em> to form protocatechuic acid (<strong>PCA</strong> / 3,4-dihydroxybenzoic acid).</li>
+  </ul>
+
+  <h2>Step 05: Decarboxylation to Precursor: PCA → Catechol</h2>
+  <ul>
+    <li><strong>Host Organism:</strong> <em>E. coli</em> (Bioconversion Chassis)</li>
+    <li><strong>Biological Tools:</strong> <strong>AroY</strong> (Protocatechuate decarboxylase), <strong>EcdB</strong>, and <strong>EcdD</strong></li>
+    <li><strong>Mechanism:</strong> AroY catalyzes the non-oxidative decarboxylation of PCA to produce <strong>catechol</strong>. Because AroY requires a prenylated flavin mononucleotide (<strong>prFMN</strong>) cofactor for activity, the helper enzymes <strong>EcdB</strong> (prFMN synthase) and <strong>EcdD</strong> (cofactor maturation assistant) are co-expressed to ensure maximum catalytic turnover and stability of AroY.</li>
+  </ul>
+
+  <h2>Step 06: Polymerization &amp; Final Yield: Catechol → Allomelanin</h2>
+  <ul>
+    <li><strong>Reaction Type:</strong> Open-air oxidative biopolymerization (Cell-free / Secreted output)</li>
+    <li><strong>Catalytic Conditions:</strong> Open-air exposure, slightly basic pH, and trace CuSO4 catalysts.</li>
+    <li><strong>Mechanism:</strong> Catechol molecules undergo auto-oxidation and oxidative polymerization catalyzed by trace copper ions (Cu2+). The catechol monomers condense into a nitrogen-free, cross-linked biopolymer matrix—<strong>allomelanin</strong>—yielding our broad-spectrum, reef-safe UV protectant.</li>
+  </ul>
+
+  <h2>Ensuring GMO-Free Final Product</h2>
+  <p>
+    <em>Because allomelanin is harvested as an isolated, cell-free biopolymer via open-air oxidative polymerization, zero engineered organisms remain in the final material. Learn more about our containment protocols on our</em>
+    <a href="safety.html">Safety Page</a>.
+  </p>
+
+</div>
+
+
+
+
+
+<!-- Future Implications Section -->
+<div class="future-implications" id="implications">
+
+  <h2>Future Implications</h2>
+
+  <div class="future-content">
+
+    <div class="future-block">
+      <h3>Contributions to the Scientific Community</h3>
+
+      <div class="future-item">
+        <h4>Circular Plastic Upcycling</h4>
+        <p>
+          Establishes a synthetic biology pipeline that converts
+          post-consumer PET waste into a high-value, reef-safe
+          functional biopolymer.
+        </p>
+      </div>
+
+      <div class="future-item">
+        <h4>Dual-Host Engineering</h4>
+        <p>
+          Demonstrates a modular division of labor—using
+          <i>P. pastoris</i> for efficient enzyme secretion and
+          <i>E. coli</i> for membrane-bound conversion—to mitigate
+          cellular metabolic burden.
+        </p>
+      </div>
+
+      <div class="future-item">
+        <h4>Enzymatic Decarboxylation Module</h4>
+        <p>
+          Validates the co-expression of the <i>AroY</i>
+          decarboxylase with its maturation helpers
+          (<i>EcdB</i> and <i>EcdD</i>) for converting pathway
+          intermediates into catechol precursors.
+        </p>
+      </div>
+    </div>
+
+    <div class="future-block">
+      <h3>Strategic Avenues for Expansion</h3>
+
+      <div class="future-item">
+        <h4>Broadening Plastic Feedstocks</h4>
+        <p>
+          Integrating additional degradation enzymes to process
+          alternative polymer waste streams into aromatic precursors.
+        </p>
+      </div>
+
+      <div class="future-item">
+        <h4>Process Scale-Up</h4>
+        <p>
+          Transitioning from batch bioconversion to optimized,
+          scalable systems for cell-free allomelanin harvesting
+          and production.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="future-conclusion">
+    <h3>MELANIFY</h3>
+    <p>
+      MELANIFY represents a commitment to protecting both human
+      health and ocean ecosystems. By turning marine plastic
+      pollution into sustainable photoprotection, we aim to bridge
+      synthetic biology with environmental protection—moving toward
+      a future where everyday sun care works in harmony with
+      fragile marine life.
+    </p>
+  </div>
+
+</div>
 
   </div>
 </section>
 
-      <div class="article-layout wrap">
-        <aside class="article-sidebar">
-          <div class="toc-sticky">
-            <span class="small-label">ON THIS PAGE</span>
-           
-<nav class="toc" aria-label="Chapter contents">
-  <a class="toc-primary" href="#top">
-    Project Overview
-  </a>
-
-  <a class="toc-primary" href="#project-problems">
-    Understanding the Challenge
-  </a>
-
-  <a class="toc-primary" href="#meet-pichia">
-    Meet Pichia pastoris
-  </a>
-
-  <a class="toc-primary" href="proposed-pathway.html">
-    Proposed Pathway
-  </a>
-
-  <a class="toc-primary" href="#references">
-    References
-  </a>
-</nav>
-        </aside>
 
 
-      
-<!-- REFERENCES SECTION -->
+
+
 <section class="references-section" id="references">
   <div class="references-container">
 
-    <span class="references-eyebrow">SOURCES &amp; CITATIONS</span>
+    <div class="references-header">
+      <span class="references-tag">RESEARCH & SOURCES</span>
+      <h2>References<span>.</span></h2>
+      <p>
+        Scientific research and trusted sources supporting
+        the MELANIFY project and its mission.
+      </p>
+      <div class="references-line"></div>
+    </div>
 
-    <h2>References</h2>
+    <div class="references-grid">
 
-    <p class="references-intro">
-      Scientific sources and publications supporting the information
-      presented in the MELANIFY project.
-    </p>
+      <article class="reference-card">
+        <span class="reference-number">01</span>
+        <div class="reference-info">
+          <h3>Life Cycle Environmental Impacts of PET Plastic Water Bottles</h3>
+          <p class="reference-author">National Institutes of Health Environmental Management System · n.d.</p>
+          <a href="https://nems.nih.gov/sustain/Pages/PETWaterBottleImpact.aspx" target="_blank" rel="noopener noreferrer">Read source <span>↗</span></a>
+        </div>
+      </article>
 
-    <ol class="references-list">
+      <article class="reference-card">
+        <span class="reference-number">02</span>
+        <div class="reference-info">
+          <h3>PET Bottle Waste Used Globally in a Year: Quantity and Impacts</h3>
+          <p class="reference-author">Aquapet Plastik Geri Dönüşüm · n.d.</p>
+          <a href="https://aquapet.com.tr/pet-bottle-waste-used-globally-in-a-year-quantity-and-impacts/" target="_blank" rel="noopener noreferrer">Read source <span>↗</span></a>
+        </div>
+      </article>
 
-      <li>
-        World Bank. (2022).
-        <em>Plastic waste material flow analysis for Thailand – Summary report.</em>
-        Marine Plastics Series, East Asia and Pacific Region.
-      </li>
+      <article class="reference-card">
+        <span class="reference-number">03</span>
+        <div class="reference-info">
+          <h3>Ultraviolet Radiation</h3>
+          <p class="reference-author">World Health Organization · 2022</p>
+          <a href="https://www.who.int/news-room/fact-sheets/detail/ultraviolet-radiation" target="_blank" rel="noopener noreferrer">Read source <span>↗</span></a>
+        </div>
+      </article>
 
-      <li>
-        Thai Meteorological Department. (n.d.).
-        <em>UV index.</em>
-        Ozone and Radiation Center.
-        <a href="https://ozone.tmd.go.th/UV_index.htm"
-           target="_blank" rel="noopener noreferrer">
-          https://ozone.tmd.go.th/UV_index.htm
-        </a>
-      </li>
+      <article class="reference-card">
+        <span class="reference-number">04</span>
+        <div class="reference-info">
+          <h3>The Truth About Corals and Sunscreen</h3>
+          <p class="reference-author">Smithsonian Ocean · n.d.</p>
+          <a href="https://ocean.si.edu/ecosystems/coral-reefs/truth-about-corals-and-sunscreen" target="_blank" rel="noopener noreferrer">Read source <span>↗</span></a>
+        </div>
+      </article>
 
-      <li>
-        World Health Organization. (2022, June 21).
-        <em>Ultraviolet radiation.</em>
-        <a href="https://www.who.int/news-room/fact-sheets/detail/ultraviolet-radiation"
-           target="_blank" rel="noopener noreferrer">
-          Read the WHO fact sheet
-        </a>
-      </li>
+      <article class="reference-card">
+        <span class="reference-number">05</span>
+        <div class="reference-info">
+          <h3>What Are the Side Effects of Oxybenzone?</h3>
+          <p class="reference-author">Patsnap Synapse · n.d.</p>
+          <a href="https://synapse.patsnap.com/article/what-are-the-side-effects-of-oxybenzone" target="_blank" rel="noopener noreferrer">Read source <span>↗</span></a>
+        </div>
+      </article>
 
-      <li>
-        Sirithanabadeekul, P. (2019, April 18).
-        <em>Thailand’s UV index rating and the risk of sunburn.</em>
-        Samitivej Hospital.
-        <a href="https://www.samitivejhospitals.com/article/detail/uv-index"
-           target="_blank" rel="noopener noreferrer">
-          Read the article
-        </a>
-      </li>
+      <article class="reference-card">
+        <span class="reference-number">06</span>
+        <div class="reference-info">
+          <h3>Melanin Biopolymers and Photoprotection</h3>
+          <p class="reference-author">National Center for Biotechnology Information · 2023</p>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10002160/" target="_blank" rel="noopener noreferrer">Read source <span>↗</span></a>
+        </div>
+      </article>
 
-      <li>
-        Department of National Parks, Wildlife and Plant Conservation.
-        (2021, August 4).
-        <em>
-          Prohibition of sunscreen containing chemicals harmful to coral
-          reefs in national parks.
-        </em>
-        Ministry of Natural Resources and Environment.
-        <a href="https://portal.dnp.go.th/Content/nationalpark?contentId=25456"
-           target="_blank" rel="noopener noreferrer">
-          Read the official publication
-        </a>
-      </li>
+      <article class="reference-card">
+        <span class="reference-number">07</span>
+        <div class="reference-info">
+          <h3>Plastic Waste Material Flow Analysis for Thailand: Summary Report</h3>
+          <p class="reference-author">World Bank · 2022</p>
+          <p class="reference-note">Marine Plastics Series · East Asia and Pacific Region</p>
+        </div>
+      </article>
 
-      <li>
-        Downs, C. A., Kramarsky-Winter, E., Segal, R., Fauth, J.,
-        Knutson, S., Bronstein, O., Ciner, F. R., Jeger, R.,
-        Lichtenfeld, Y., Woodley, C. M., Pennington, P., Cadenas, K.,
-        Kushmaro, A., &amp; Loya, Y. (2016).
-        Toxicopathological effects of the sunscreen UV filter,
-        oxybenzone (benzophenone-3), on coral planulae and cultured
-        primary cells and its environmental contamination in Hawaii
-        and the U.S. Virgin Islands.
-        <em>Archives of Environmental Contamination and Toxicology,
-        70</em>(2), 265–288.
-        <a href="https://doi.org/10.1007/s00244-015-0227-7"
-           target="_blank" rel="noopener noreferrer">
-          https://doi.org/10.1007/s00244-015-0227-7
-        </a>
-      </li>
+      <article class="reference-card">
+        <span class="reference-number">08</span>
+        <div class="reference-info">
+          <h3>UV Index</h3>
+          <p class="reference-author">Thai Meteorological Department · n.d.</p>
+          <a href="https://ozone.tmd.go.th/UV_index.htm" target="_blank" rel="noopener noreferrer">Read source <span>↗</span></a>
+        </div>
+      </article>
 
-    </ol>
+      <article class="reference-card">
+        <span class="reference-number">09</span>
+        <div class="reference-info">
+          <h3>Ultraviolet Radiation</h3>
+          <p class="reference-author">World Health Organization · 2022</p>
+          <a href="https://www.who.int/news-room/fact-sheets/detail/ultraviolet-radiation" target="_blank" rel="noopener noreferrer">Read source <span>↗</span></a>
+        </div>
+      </article>
+
+      <article class="reference-card">
+        <span class="reference-number">10</span>
+        <div class="reference-info">
+          <h3>Thailand’s UV Index Rating and the Risk of Sunburn</h3>
+          <p class="reference-author">Sirithanabadeekul, P. · Samitivej Hospital · 2019</p>
+          <a href="https://www.samitivejhospitals.com/article/detail/uv-index" target="_blank" rel="noopener noreferrer">Read source <span>↗</span></a>
+        </div>
+      </article>
+
+      <article class="reference-card">
+        <span class="reference-number">11</span>
+        <div class="reference-info">
+          <h3>The Truth About Corals and Sunscreen</h3>
+          <p class="reference-author">Smithsonian Ocean · n.d.</p>
+          <a href="https://ocean.si.edu/ecosystems/coral-reefs/truth-about-corals-and-sunscreen" target="_blank" rel="noopener noreferrer">Read source <span>↗</span></a>
+        </div>
+      </article>
+
+      <article class="reference-card">
+        <span class="reference-number">12</span>
+        <div class="reference-info">
+          <h3>What Are the Side Effects of Oxybenzone?</h3>
+          <p class="reference-author">Patsnap Synapse · n.d.</p>
+          <a href="https://synapse.patsnap.com/article/what-are-the-side-effects-of-oxybenzone" target="_blank" rel="noopener noreferrer">Read source <span>↗</span></a>
+        </div>
+      </article>
+
+      <article class="reference-card">
+        <span class="reference-number">13</span>
+        <div class="reference-info">
+          <h3>Toxicological Effects of Organic UV Filters on Marine Ecosystems</h3>
+          <p class="reference-author">National Center for Biotechnology Information · 2018</p>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/29981751/" target="_blank" rel="noopener noreferrer">Read source <span>↗</span></a>
+        </div>
+      </article>
+
+      <article class="reference-card">
+        <span class="reference-number">14</span>
+        <div class="reference-info">
+          <h3>Occurrence, Bioaccumulation, and Environmental Risks of Sunscreen Active Ingredients</h3>
+          <p class="reference-author">National Center for Biotechnology Information · 2020</p>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7648445/" target="_blank" rel="noopener noreferrer">Read source <span>↗</span></a>
+        </div>
+      </article>
+
+      <article class="reference-card">
+        <span class="reference-number">15</span>
+        <div class="reference-info">
+          <h3>Notification on Sunscreen Chemical Restrictions in National Parks</h3>
+          <p class="reference-author">Department of National Parks, Wildlife and Plant Conservation · n.d.</p>
+          <a href="https://portal.dnp.go.th/Content/nationalpark?contentId=25456" target="_blank" rel="noopener noreferrer">Read source <span>↗</span></a>
+        </div>
+      </article>
+
+      <article class="reference-card">
+        <span class="reference-number">16</span>
+        <div class="reference-info">
+          <h3>Melanin Biopolymers in Pharmacology and Medicine</h3>
+          <p class="reference-author">National Center for Biotechnology Information · 2023</p>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10002160/" target="_blank" rel="noopener noreferrer">Read source <span>↗</span></a>
+        </div>
+      </article>
+
+      <article class="reference-card">
+        <span class="reference-number">17</span>
+        <div class="reference-info">
+          <h3>Melanin for Photoprotection and Hair Coloration in the Emerging Era of Nanocosmetics</h3>
+          <p class="reference-author">National Center for Biotechnology Information · 2024</p>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11172709/" target="_blank" rel="noopener noreferrer">Read source <span>↗</span></a>
+        </div>
+      </article>
+
+      <article class="reference-card">
+        <span class="reference-number">18</span>
+        <div class="reference-info">
+          <h3>Exploring Allomelanin: A Comparative Analysis via Natural Product Extraction and Synthesis</h3>
+          <p class="reference-author">National Center for Biotechnology Information · 2025</p>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12904162/" target="_blank" rel="noopener noreferrer">Read source <span>↗</span></a>
+        </div>
+      </article>
+
+      <article class="reference-card">
+        <span class="reference-number">19</span>
+        <div class="reference-info">
+          <h3>Fungal Melanin as a Biocompatible Broad-Spectrum Sunscreen with High Antioxidant Activity</h3>
+          <p class="reference-author">National Center for Biotechnology Information · 2022</p>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9033651/" target="_blank" rel="noopener noreferrer">Read source <span>↗</span></a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="references-bottom">
+      <span class="references-bottom-icon">M</span>
+      <p>Science for healthier oceans and a more sustainable future.</p>
+    </div>
 
   </div>
 </section>
 
-       
+
+                <!-- </section> -->
+
+
+
+
+
+
+
+            </div>
+        </div>
+
     </main>
-  
 
-      <footer class="site-footer">
-      <div class="footer-top">
-        <div>
-          <!-- <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">m</span><span>MELANIFY<span class="brand-period">.</span></span></a> -->
 
- <a class="brand" href="index.html" aria-label="MELANIFY home">
-        <!-- <span>MELANIFY<span class="brand-period">.</span></span> -->
-      <img src="images/logo2.jpeg" alt="MELANIFY Logo" class="brand-logo">
-    </a>
+    <dialog class="figure-dialog" aria-label="Enlarged research figure">
+        <button class="dialog-close" aria-label="Close enlarged figure">Close <span aria-hidden="true">×</span></button>
+        <img alt="">
+        <p>Original figure from the supplied research document</p>
+    </dialog>
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div>
+                <!-- <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">m</span><span>MELANIFY<span class="brand-period">.</span></span></a> -->
 
-          <p>Rethinking plastic.<br>Exploring what comes next.</p>
+                <!-- Logo Image -->
+                <a class="brand" href="index.html" aria-label="MELANIFY home">
+                    <!-- <span>MELANIFY<span class="brand-period">.</span></span> -->
+                    <img src="images/logo2.jpeg" alt="MELANIFY Logo" class="brand-logo">
+                </a>
+                <p>Rethinking plastic.<br>Exploring what comes next.</p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <span>THE SCIENCE</span>
+                    <a href="description.html">Our project</a>
+                    <a href="engineering.html">Engineering</a>
+                    <a href="results.html">Results</a>
+                    <a href="protocols.html">Protocols</a>
+                </div>
+                <div>
+                    <span>THE CONNECTIONS</span>
+                    <a href="human-practices.html">Human practices</a>
+                    <a href="education.html">Education</a>
+                    <a href="entrepreneurship.html">Entrepreneurship</a>
+                </div>
+            </div>
         </div>
-        <div class="footer-links">
-          <div>
-            <span>THE SCIENCE</span>
-            <a href="description.html">Our project</a>
-            <a href="engineering.html">Engineering</a>
-            <a href="results.html">Results</a>
-            <a href="protocols.html">Protocols</a>
-          </div>
-          <div>
-            <span>THE CONNECTIONS</span>
-            <a href="human-practices.html">Human practices</a>
-            <a href="education.html">Education</a>
-            <a href="entrepreneurship.html">Entrepreneurship</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>MELANIFY · XCL American School of Bangkok</span>
-        <span>A synthetic biology research project</span>
+        <div class="footer-bottom">
+            <span>MELANIFY · XCL American School of Bangkok</span>
+            <span>A synthetic biology research project</span>
 
-      </div>
-
-        
-
-<section class="include-section">
-  <div class="include-container">
-
-    <div class="include-group">
-      <h3>Include partners</h3>
-
-      <div class="include-logos partners-logos">
-        <div class="include-logo">
-          <img src="https://tse3.mm.bing.net/th/id/OIP.cafMGwSaQV2IFo_IEi9hwwHaGW?r=0&pid=Api&h=220&P=0" alt="Anthropic">
         </div>
 
-        <div class="include-logo">
-          <img src="https://tse4.mm.bing.net/th/id/OIP.qyjJknmb3kASYX0O0ofGCQHaA1?r=0&pid=Api&h=220&P=0" alt="SnapGene">
-        </div>
-
-        <div class="include-logo">
-          <img src="https://tse3.mm.bing.net/th/id/OIP.W4LqDQgPfTC5kJaNJbA4VAHaB5?r=0&pid=Api&h=220&P=0">
-        </div>
-
-        <div class="include-logo">
-          <img src="https://tse3.mm.bing.net/th/id/OIP.T9qq5NsBipLgx5q9Y4DMCAHaFe?r=0&pid=Api&h=220&P=0" alt="IDT">
-        </div>
-
-        <div class="include-logo">
-          <img src="https://tse1.mm.bing.net/th/id/OIP.W-fJ_sdreK7lmWoJ_1Q9YQHaCF?r=0&pid=Api&h=220&P=0" alt="Twist Bioscience">
-        </div>
-
-         <div class="include-logo">
-          <img src="https://tse1.mm.bing.net/th/id/OIP.7oBq-u4yjbdn28AxTM_jmAHaDt?r=0&pid=Api&h=220&P=0" alt="Twist Bioscience">
-        </div>
-      </div>
-    </div>
-
-    <div class="include-group sponsor-group">
-      <h3>Include sponsor</h3>
-
-      <div class="include-logos sponsor-logos">
-        <div class="include-logo">
-          <img src="https://tse1.mm.bing.net/th/id/OIP.4G-4rA2sZnSZnoiXnEoeOQHaHa?r=0&pid=Api&h=220&P=0" alt="American School of Bangkok">
-        </div>
-
-        <div class="include-logo">
-          <img src="images/best.png" alt="SMT sponsor">
-        </div>
-      </div>
-    </div>
 
 
-</section>
+        <section class="include-section">
+            <div class="include-container">
+
+                <div class="include-group">
+                    <h3>Include partners</h3>
+
+                    <div class="include-logos partners-logos">
+                        <div class="include-logo">
+                            <img src="https://tse3.mm.bing.net/th/id/OIP.cafMGwSaQV2IFo_IEi9hwwHaGW?r=0&pid=Api&h=220&P=0"
+                                alt="Anthropic">
+                        </div>
+
+                        <div class="include-logo">
+                            <img src="https://tse4.mm.bing.net/th/id/OIP.qyjJknmb3kASYX0O0ofGCQHaA1?r=0&pid=Api&h=220&P=0"
+                                alt="SnapGene">
+                        </div>
+
+                        <div class="include-logo">
+                            <img
+                                src="https://tse3.mm.bing.net/th/id/OIP.W4LqDQgPfTC5kJaNJbA4VAHaB5?r=0&pid=Api&h=220&P=0">
+                        </div>
+
+                        <div class="include-logo">
+                            <img src="https://tse3.mm.bing.net/th/id/OIP.T9qq5NsBipLgx5q9Y4DMCAHaFe?r=0&pid=Api&h=220&P=0"
+                                alt="IDT">
+                        </div>
+
+                        <div class="include-logo">
+                            <img src="https://tse1.mm.bing.net/th/id/OIP.W-fJ_sdreK7lmWoJ_1Q9YQHaCF?r=0&pid=Api&h=220&P=0"
+                                alt="Twist Bioscience">
+                        </div>
+
+                        <div class="include-logo">
+                            <img src="https://tse1.mm.bing.net/th/id/OIP.7oBq-u4yjbdn28AxTM_jmAHaDt?r=0&pid=Api&h=220&P=0"
+                                alt="Twist Bioscience">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="include-group sponsor-group">
+                    <h3>Include sponsor</h3>
+
+                    <div class="include-logos sponsor-logos">
+                        <div class="include-logo">
+                            <img src="https://tse1.mm.bing.net/th/id/OIP.4G-4rA2sZnSZnoiXnEoeOQHaHa?r=0&pid=Api&h=220&P=0"
+                                alt="American School of Bangkok">
+                        </div>
+
+                        <div class="include-logo">
+                            <img src="images/best.png" alt="SMT sponsor">
+                        </div>
+                    </div>
+                </div>
+
+
+        </section>
 
         <a href="#top">Back to top</a>
-      </div>
+        </div>
     </footer>
-    <dialog class="figure-dialog" aria-label="Enlarged research figure">
-      <button class="dialog-close" aria-label="Close enlarged figure">Close <span aria-hidden="true">×</span></button>
-      <img alt="">
-      <p>Original figure from the supplied research document</p>
-    </dialog>
 
 
-   
+    <script>
+        /*
+           PROJECT PROBLEMS ACCORDION
+           Both dropdowns can stay open simultaneously.
+        */
+
+        document.querySelectorAll(".problem-section").forEach((section) => {
+            const items = section.querySelectorAll(".problem-item");
+
+            items.forEach((item) => {
+                const button = item.querySelector(".problem-toggle");
+                const panel = item.querySelector(".problem-panel");
+                const icon = item.querySelector(".problem-icon");
+
+                // Skip if required elements are missing
+                if (!button || !panel) return;
+
+                button.addEventListener("click", () => {
+                    const isOpen = button.getAttribute("aria-expanded") === "true";
+                    const shouldOpen = !isOpen;
+
+                    // Toggle only the clicked dropdown
+                    button.setAttribute("aria-expanded", String(shouldOpen));
+                    panel.hidden = !shouldOpen;
+
+                    // Update the plus/minus icon
+                    if (icon) {
+                        icon.textContent = shouldOpen ? "−" : "+";
+                    }
+
+                    // Update active styling
+                    item.classList.toggle("is-active", shouldOpen);
+                });
+            });
+        });
+    </script>
+
+
 <script>
-/*
-   PROJECT PROBLEMS ACCORDION
-*/
 
-document.querySelectorAll(".problem-section").forEach((section) => {
-  const items = section.querySelectorAll(".problem-item");
+document.addEventListener("DOMContentLoaded", function () {
+  const steps = document.querySelectorAll(".pathway-step");
 
-  items.forEach((item) => {
-    const button = item.querySelector(".problem-toggle");
-    const panel = item.querySelector(".problem-panel");
-    const icon = item.querySelector(".problem-icon");
+  const infoHeader = document.getElementById("info-header");
+  const infoTitle = document.getElementById("info-title");
+  const infoDescription = document.getElementById("info-description");
+  const infoMechanism = document.getElementById("info-mechanism");
 
-    button.addEventListener("click", () => {
-      const wasOpen = button.getAttribute("aria-expanded") === "true";
+  const pathwayData = [
+    {
+      header: "STEP 01 — STARTING MATERIAL",
+      title: "PET Plastic",
+      description:
+        "Post-consumer polyethylene terephthalate (PET) plastic waste serves as the primary carbon feedstock, transforming a major environmental waste stream into a valuable biological resource.",
+      mechanism: "Waste Aggregation & Thermal Pre-Conditioning"
+    },
+    {
+      header: "STEP 02 — INITIAL BREAKDOWN",
+      title: "MHET",
+      description:
+        "PET breakdown produces mono(2-hydroxyethyl) terephthalate (MHET), an intermediate in the conversion of plastic waste into reusable chemical building blocks.",
+      mechanism: "Enzymatic PET Depolymerization"
+    },
+    {
+      header: "STEP 03 — MONOMER FORMATION",
+      title: "TPA",
+      description:
+        "Terephthalic acid (TPA) is obtained during PET depolymerization and provides a starting compound for downstream biological conversion.",
+      mechanism: "PET-Derived Monomer Recovery"
+    },
+    {
+      header: "STEP 04 — BIOLOGICAL CONVERSION",
+      title: "PCA",
+      description:
+        "Protocatechuic acid (PCA) is an intermediate in the proposed pathway that connects plastic-derived compounds with catechol production.",
+      mechanism: "Microbial Bioconversion"
+    },
+    {
+      header: "STEP 05 — KEY INTERMEDIATE",
+      title: "Catechol",
+      description:
+        "Catechol is the key aromatic precursor for the proposed formation of allomelanin, linking the plastic upcycling process to pigment production.",
+      mechanism: "Catechol Precursor Formation"
+    },
+    {
+      header: "STEP 06 — FINAL PRODUCT",
+      title: "Allomelanin",
+      description:
+        "Allomelanin is the target pigment in the MELANIFY pathway. The project explores converting plastic-derived feedstock into a potentially useful, nature-inspired pigment.",
+      mechanism: "Pigment Biosynthesis"
+    }
+  ];
 
-      /* Close all accordion items */
-      items.forEach((otherItem) => {
-        const otherButton = otherItem.querySelector(".problem-toggle");
-        const otherPanel = otherItem.querySelector(".problem-panel");
-        const otherIcon = otherItem.querySelector(".problem-icon");
+  steps.forEach(function (button, index) {
+    button.addEventListener("click", function () {
+      const data = pathwayData[index];
 
-        otherButton.setAttribute("aria-expanded", "false");
-        otherPanel.hidden = true;
-        otherIcon.textContent = "+";
-        otherItem.classList.remove("is-active");
+      if (!data) return;
+
+      /* Update active button */
+      steps.forEach(function (step) {
+        step.classList.remove("active");
+        step.setAttribute("aria-pressed", "false");
       });
 
-      /* Open the selected item if it was closed */
-      if (!wasOpen) {
-        button.setAttribute("aria-expanded", "true");
-        panel.hidden = false;
-        icon.textContent = "−";
-        item.classList.add("is-active");
-      }
+      button.classList.add("active");
+      button.setAttribute("aria-pressed", "true");
+
+      /* Update information panel */
+      infoHeader.textContent = data.header;
+      infoTitle.textContent = data.title;
+      infoDescription.textContent = data.description;
+      infoMechanism.textContent = data.mechanism;
     });
   });
 });
 </script>
 
-  </body>
+</body>
+
 </html>

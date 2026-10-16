@@ -7,13 +7,16 @@
     <meta name="description" content="MELANIFY explores a biological pathway from PET plastic waste to allomelanin. Discover our engineering, research and community work.">
     <title>Integrated human practices | MELANIFY</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
     <script src="script.js" defer=""></script>
-    <link rel="stylesheet" href="/css/project.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-    <link rel="stylesheet" href="/css/human-pratices.css">
+    <!-- <link rel="stylesheet" href="/css/project.css"> -->
+    <!-- <link rel="stylesheet" href="/css/responsive.css"> -->
+    <link rel="stylesheet" href="/css/human-practises.css">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="css/common-typography.css">
+    <link rel="stylesheet" href="css/sec.css">
+    <link rel="stylesheet" href="css/hird.css">
+
 
     <style>
 
@@ -27,95 +30,25 @@
 }
 
 
-   /* NAVIGATION INDICATORS */
 
-.nav-indicator {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 16px;
-  height: 16px;
-  min-width: 16px;
-  flex: 0 0 16px;
-  background-color: #f28c28;
-  border-radius: 2px;
+/* sidebar */
+
+.article-sidebar {
+  position: sticky;
+  top: 100px;
+  align-self: start;
+  height: fit-content;
 }
 
-
-   /* BRAND / LOGO */
-
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-width: 0;
-  max-width: 100%;
+.toc-sticky {
+  position: sticky;
+  top: 100px;
 }
 
-.brand-logo {
-  display: block;
-  width: 80px;
-  height: 80px;
-  max-width: 100%;
-  flex: 0 0 auto;
-  object-fit: contain;
-  margin: 0;
+.article-layout {
+  align-items: start;
 }
 
-
-   /* MAIN TAB INDICATOR */
-
-
-.nav-main::before {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 6px;
-  background-color: #ffffff;
-  border-radius: 50%;
-}
-
-
-   /* DROPDOWN INDICATOR */
-
-
-.nav-dropdown-icon::before {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 6px;
-  border-right: 1.5px solid #ffffff;
-  border-bottom: 1.5px solid #ffffff;
-  transform: translateY(-2px) rotate(45deg);
-}
-
-
-   /* NAVIGATION LAYOUT */
-
-
-#main-nav {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px 12px;
-  max-width: 100%;
-}
-
-#main-nav > a.main-tab,
-#main-nav .nav-group > summary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-width: 0;
-  max-width: 100%;
-  line-height: 1.5;
-}
-
-/* Main navigation links */
-
-#main-nav > a {
-  overflow-wrap: anywhere;
-}
 
    /* SECTION HEADING */
 
@@ -133,11 +66,227 @@
 }
 
 
+/* stage content */
+.stage-content {
+  min-height: 280px !important;
+  padding: 20px 14px 22px !important;
+  border-radius: 18px !important;
+}
+
+.stage-content h3 {
+  font-size: 18px !important;
+  line-height: 1.15 !important;
+  margin-bottom: 14px !important;
+  letter-spacing: -0.4px !important;
+}
+
+
+/* Bigger List Text */
+.stage-content li {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 4px;
+}
+
+/* Bigger Stage Numbers */
+.stage-number {
+  font-size: 29px;
+}
+
+
+/* ===== FIX STAGE CARDS RESPONSIVENESS ===== */
+
+/* Tablet and Desktop */
+.stages-timeline {
+  width: 100%;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  box-sizing: border-box;
+}
+
+.stage-card {
+  min-width: 0;
+}
+
+.stage-content {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 210px;
+  padding: 18px 12px;
+}
+
+.stage-content h3 {
+  font-size: 14px;
+  line-height: 1.15;
+  overflow-wrap: break-word;
+}
+
+.stage-content ul {
+  padding-left: 12px;
+}
+
+.stage-content li {
+  font-size: 10px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* second section */
+
+
+/* =====================================
+   CYCLE OF REFLECTION SECTION
+===================================== */
+
+
+
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 900px) {
+  .reflection-container {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .reflection-content {
+    gap: 22px;
+  }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+  .reflection-section {
+    padding: 30px 0 40px;
+  }
+
+  .reflection-container {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .reflection-content {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .reflection-image,
+  .idea-framework {
+    width: 100%;
+  }
+
+  .reflection-intro {
+    margin-bottom: 25px;
+  }
+}
+
+
+
+
+
+
+/* Mobile: Two columns */
+@media (max-width: 520px) {
+  .stages-timeline {
+    width: 100%;
+    max-width: 440px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 38px 14px;
+    margin: 40px auto;
+    padding: 12px 8px;
+  }
+
+  .stage-card {
+    width: 100%;
+    padding-top: 27px;
+  }
+
+  .stage-1 .stage-content,
+  .stage-2 .stage-content,
+  .stage-3 .stage-content,
+  .stage-4 .stage-content {
+    margin-top: 0;
+  }
+
+  .stage-number,
+  .stage-2 .stage-number,
+  .stage-4 .stage-number {
+    top: 0;
+    bottom: auto;
+    transform: none;
+    font-size: 25px;
+  }
+
+  .stage-content {
+    width: 100%;
+    min-height: 205px;
+    height: auto;
+    padding: 16px 10px;
+    border-radius: 15px;
+  }
+
+  .stage-content h3 {
+    font-size: 12px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .stage-content li {
+    font-size: 9px;
+    line-height: 1.45;
+    margin-bottom: 4px;
+  }
+}
+
+/* Very small phones: One column */
+@media (max-width: 360px) {
+  .stages-timeline {
+    max-width: 300px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    padding-inline: 10px;
+  }
+
+  .stage-content {
+    min-height: auto;
+    padding: 20px 16px;
+  }
+
+  .stage-content h3 {
+    font-size: 15px;
+  }
+
+  .stage-content li {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+}
+
+
    /* TABLET RESPONSIVE */
 
 
 @media (max-width: 900px) {
-  .brand-logo {
+  /* .brand-logo {
     width: 36px;
     height: 36px;
   }
@@ -150,7 +299,7 @@
   #main-nav .nav-group > summary {
     gap: 6px;
     font-size: 14px;
-  }
+  } */
 
   .story-section .section-heading h2 {
     font-size: clamp(27px, 4vw, 36px);
@@ -161,7 +310,7 @@
    /* MOBILE RESPONSIVE */
 
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .brand {
     gap: 6px;
   }
@@ -169,8 +318,8 @@
   .brand-logo {
     width: 32px;
     height: 32px;
-  }
-
+  } */
+/* 
   #main-nav {
     width: 100%;
     gap: 8px;
@@ -202,13 +351,13 @@
     white-space: normal;
     text-wrap: wrap;
   }
-}
+} */
 
 
    /* SMALL MOBILE */
 
 
-@media (max-width: 360px) {
+/* @media (max-width: 360px) {
   .brand-logo {
     width: 28px;
     height: 28px;
@@ -226,7 +375,7 @@
   .story-section .section-heading h2 {
     font-size: 26px;
   }
-}
+} */
 
 
    /* REDUCED MOTION ACCESSIBILITY */
@@ -243,6 +392,94 @@
   }
 }
 </style>
+
+<style>
+  /* STAGES PAGE LAYOUT */
+#main .article-layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  align-items: start;
+  gap: 30px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 25px 20px;
+}
+
+/* LEFT SIDEBAR */
+#main .article-sidebar {
+  min-width: 0;
+  align-self: stretch;
+}
+
+#main .toc-sticky {
+  position: sticky;
+  top: 105px;
+  padding: 18px 12px;
+  background: var(--ice);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+#main .toc {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#main .toc a {
+  display: block;
+  padding: 9px 10px;
+  color: var(--ink);
+  font-size: 15px !important;
+  line-height: 1.5;
+  border-radius: 6px;
+}
+
+#main .toc a:hover {
+  background: var(--pale);
+  color: var(--ocean);
+}
+
+/* RIGHT SIDE SECTIONS */
+#main .chapter-hero,
+#main .reflection-section,
+#main .article-content {
+  min-width: 0;
+  width: 100%;
+}
+
+#main .chapter-hero > .wrap {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  #main .article-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding: 15px;
+  }
+
+  #main .toc-sticky {
+    position: static;
+  }
+
+  #main .toc {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #main .toc a {
+    padding: 7px 9px;
+  }
+}
+</style>
+  
   </head>
   <body data-page="human-practices">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -257,12 +494,21 @@
       <img src="logo-removebg-preview.png" alt="MELANIFY Logo" class="brand-logo">
     </a>
 
-    
-    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
-      <span></span>
-      <span></span>
-      <span class="sr-only">Toggle navigation</span>
-    </button>
+<button class="menu-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="main-nav">
+
+  <span class="hamburger-icon" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+
+  <!-- <span class="sr-only">Toggle navigation</span> -->
+
+</button>
 
     <nav id="main-nav" aria-label="Main navigation">
 
@@ -274,7 +520,7 @@
         <summary>Project<span class="chevron"></span></summary>
         <div class="nav-dropdown">
           <a href="description.html">Description: Problem Breakdown</a>
-          <a href="proposed-pathway.html">Proposed Pathway</a>
+          <!-- <a href="proposed-pathway.html">Proposed Pathway</a> -->
         </div>
       </details>
 
@@ -316,47 +562,54 @@
   <div class="reading-progress" aria-hidden="true"></div>
 
 </header>
-    <main id="main">
-      
-     
-<section class="chapter-hero" id="top">
-  <div class="wrap">
+  <main id="main">
+
+  <div class="article-layout wrap">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="article-sidebar">
+      <div class="toc-sticky">
+        <span class="small-label">ON THIS PAGE</span>
+
+        <nav class="toc" aria-label="Chapter contents">
+          <a class="toc-primary" href="#stage1">Stage 1</a>
+          <a class="toc-primary" href="#cycle2">Cycle 2</a>
+          <a class="toc-primary" href="#stage2">Stage 2</a>
+          <a class="toc-primary" href="#stage3">Stage 3</a>
+          <a class="toc-primary" href="#stage4">Stage 4</a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- RIGHT SIDE: ALL PAGE SECTIONS -->
+    <div class="article-main">
+
+      <section class="chapter-hero" id="top">
+        <div class="wrap">
 
     <div class="chapter-description">
       <h1>Stages</h1>
+      
+<p>
+  The Human Practice journey for MELANIFY unfolded in a series of thoughtfully connected stages. We began by immersing ourselves in the underlying problem, seeking to truly understand the broader context and the challenges faced by those affected.
+</p>
 
-      <p>
-        The Human Practice journey for MELANIFY unfolded in a series
-        of thoughtfully connected stages. We began by immersing
-        ourselves in the underlying problem, seeking to truly understand
-        the broader context and the challenges faced by those affected.
-      </p>
+<p>
+  As our understanding deepened, we turned our attention to the people who would use or be impacted by our work, taking care to listen to their perspectives and experiences.
+</p>
 
-      <p>
-        As our understanding deepened, we turned our attention to the
-        people who would use or be impacted by our work, taking care
-        to listen to their perspectives and experiences.
-      </p>
+<p>
+  This focus on real users guided our next steps as we explored what would make our design both feasible and valuable in practice, iterating on potential solutions and testing assumptions along the way.
+</p>
 
-      <p>
-        This focus on real users guided our next steps as we explored
-        what would make our design both feasible and valuable in
-        practice, iterating on potential solutions and testing assumptions
-        along the way.
-      </p>
+<p>
+  Ultimately, these efforts set the groundwork for bringing MELANIFY closer to practical application, as we considered the pathways for introducing it to the market and explored opportunities to widen its positive impact.
+</p>
 
-      <p>
-        Ultimately, these efforts set the groundwork for bringing
-        MELANIFY closer to practical application, as we considered
-        the pathways for introducing it to the market and explored
-        opportunities to widen its positive impact.
-      </p>
+<p>
+  This approach made it possible to continually refine our project, ensuring that every decision was shaped by the needs and realities of the community we hope to serve.
+</p>
 
-      <p>
-        This approach made it possible to continually refine our
-        project, ensuring that every decision was shaped by the needs
-        and realities of the community we hope to serve.
-      </p>
     </div>
 
     <!-- Stages Cards -->
@@ -421,8 +674,7 @@
 
 
   </div>
-</section>
-
+</section>  
 
 <section class="reflection-section">
   <div class="reflection-container">
@@ -485,53 +737,11 @@
     </div>
   </div>
 </section>
-
-    
-      <div class="article-layout wrap">
-        <aside class="article-sidebar">
-          <div class="toc-sticky">
-            <span class="small-label">ON THIS PAGE</span>
-            <nav class="toc" aria-label="Chapter contents">
-              <a class="toc-primary" href="#cycle-1">Cycle 1</a>
-              <a class="toc-primary" href="#consolidating-project-with-expert-opinion">Consolidating project with expert opinion</a>
-              <!-- <a class="toc-primary" href="#consolidating-project-with-public-opinion">Consolidating project with public opinion</a> -->
-              <a class="toc-primary" href="#cycle-2">Cycle 2</a>
-              <a class="toc-primary" href="#real-world-application">Real World Application</a>
-              <a class="toc-primary" href="#stage-3-expanding-impact">Stage 3 Expanding Impact</a>
-              <a class="toc-primary" href="#stage-4-national-awareness">Stage 4 NATIONAL AWARENESS</a>
-
-            </nav>
-            <div class="sidebar-note">
-              <span>05 / 07</span>
-              <p>Every iteration brings<br>a new perspective.</p>
-            </div>
-          </div>
-        </aside>
+       
         <article class="article-content" id="chapter-content">
-          <!-- <details class="cycle-block" id="cycle-1" open="">
-            <summary><span class="cycle-icon" aria-hidden="true">↻</span><span>Cycle 1</span><span class="chevron"></span></summary>
-            <div class="cycle-content">
-              <h3 id="consolidating-project-with-expert-opinion" class="">Consolidating project with expert opinion</h3>
-              <figure class="research-figure" data-reveal="">
-                <a class="figure-open" data-image="assets/figure-79-3.webp" data-alt="Supplied Human practices figure, source page 79" aria-label="Enlarge figure from source page 79" href="assets/figure-79-3.webp" target="_blank" rel="noopener"><img src="assets/figure-79-3.webp" alt="Supplied Human practices figure from source page 79" width="1800" height="1169" loading="lazy"><span class="figure-zoom">View full size</span></a>
-                <figcaption><span>FIGURE 01</span>From the supplied research document · p. 79</figcaption>
-              </figure>
-              <p>Our IHP journey began with feedback from professors in synthetic biology, including Professor Julius Fredens from NUS and Professor Chanati from Mahidol University.</p>
-              <p>Professor Julius Fredens reviewed our HotPETase glycosylation framework and found it interesting that we were leveraging post-translational modification to improve the thermostability of an already thermostable enzyme. His feedback encouraged us to further investigate how glycosylation could affect HotPETase under high-temperature conditions.</p>
-              <p>Professor Chanati fundamentally changed the direction of our project. Our initial idea focused on improving HotPETase thermostability and making the PET-to-TPA pathway as efficient as possible. He introduced us to the broader potential of converting PET into different high-value compounds. This led us to explore plastic upcycling rather than simply improving plastic degradation. We began asking how a PET-derived compound could address a local need, eventually leading us to melanin as a UV-shielding pigment. We incorporated his suggestion by developing MELANIFY around converting PET waste into melanin to address Thailand’s intense UV exposure.</p>
-              <h3 id="consolidating-project-with-public-opinion" class="">Consolidating project with public opinion</h3>
-              <figure class="research-figure" data-reveal="">
-                <a class="figure-open" data-image="assets/figure-80-2.webp" data-alt="Supplied Human practices figure, source page 80" aria-label="Enlarge figure from source page 80" href="assets/figure-80-2.webp" target="_blank" rel="noopener"><img src="assets/figure-80-2.webp" alt="Supplied Human practices figure from source page 80" width="800" height="575" loading="lazy"><span class="figure-zoom">View full size</span></a>
-                <figcaption><span>FIGURE 02</span>From the supplied research document · p. 80</figcaption>
-              </figure>
-              <p>After hearing Professor Chanati’s feedback, we asked our local community what they saw as pressing problems in Thailand. Among the issues we identified was Thailand’s intense UV exposure. Our survey of the XCL American School of Bangkok community showed that UV exposure was particularly relevant to our students, who spend much of their time outdoors due to limited indoor sporting facilities. This prompted us to investigate the issue beyond our school community, where we found that high UV exposure is a broader concern across Thailand. We then asked: could we turn a waste problem into a solution for a local problem? This became the basis for MELANIFY.</p>
-            </div>
-          </details> -->
-
-
-
+        
           <!-- STAGE 1 -->
-<h2 class="stage-heading">STAGE 1: PROJECT CONSOLIDATION</h2>
+<h2 class="stage-headin" id="stage1">STAGE 1: PROJECT CONSOLIDATION</h2>
 
 <!-- CYCLE 1: Always visible -->
 <section class="cycle-block" id="cycle-1">
@@ -790,14 +1000,14 @@
 </section>
 
 <!-- STAGE 2 -->
-<h2 class="stage-heading">STAGE 2: REAL-WORLD APPLICATION</h2>
+<h2 class="stage-heading" id="stage2">STAGE 2: REAL-WORLD APPLICATION</h2>
 
 <!-- CYCLE 2: Always visible -->
 <section class="cycle-block" id="cycle-2">
 
   <div class="cycle-heading">
     <span class="cycle-icon" aria-hidden="true">↻</span>
-    <span>Cycle 2</span>
+    <!-- <span>Cycle 2</span> -->
   </div>
 
   <div class="cycle-content">
@@ -976,34 +1186,14 @@
                 <figcaption><span>FIGURE 04</span>From the supplied research document · p. 83</figcaption>
               </figure> 
 </section>
-<!--                
-              <h3 id="stage-3-expanding-impact" class="">Stage 3 Expanding Impact</h3>
-              <p>Finally, we brought MELANIFY to the United Nations Industrial Development Organization (UNIDO), presenting our project to Fukuya IINO (Ph.D., MBA), Representative of UNIDO’s Sub-Regional Office for Thailand, Malaysia, Myanmar, Cambodia, Lao PDR, and Viet Nam. This gave us the opportunity to discuss our technology with an organization working across the region on industrial development and sustainable technologies.</p>
-              <p>UNIDO was particularly interested in our ability to convert PET into TPA and ultimately into melanin, especially because their work overlapped with efforts to develop alternative plastic materials. They encouraged us to consider potential collaborations and applications beyond our original scope.</p>
-              <p>Their most important question was: what happens if we take MELANIFY outside Thailand? Our original application was closely tied to Thailand’s intense UV exposure, but that constraint would not apply everywhere. This pushed us to</p>
-              <p>consider stopping the pathway at TPA or exploring other PET-derived intermediates and products better suited to different regions, including compounds such as gallic acid with potential biomedical applications.</p>
-              <p>Rather than designing MELANIFY around a single product or country, we began viewing the PET pathway as a platform for producing different high-value compounds according to local needs. UNIDO helped us take a project designed for a Thai problem and consider how the same biological infrastructure could be adapted across borders.</p>
-              <p>In the end, our project was recognized by the United Nations, giving us the opportunity to bring MELANIFY beyond our school and into conversations about how biotechnology can address global challenges.</p>
-              <figure class="research-figure" data-reveal=""> -->
-                <!-- <a class="figure-open" data-image="assets/figure-84-3.webp" data-alt="Supplied Human practices figure, source page 84" aria-label="Enlarge figure from source page 84" href="assets/figure-84-3.webp" target="_blank" rel="noopener"><img src="assets/figure-84-3.webp" alt="Supplied Human practices figure from source page 84" width="1663" height="935" loading="lazy"><span class="figure-zoom">View full size</span></a>
-                <figcaption><span>FIGURE 05</span>From the supplied research document · p. 84</figcaption>
-              </figure>
-              <figure class="research-figure" data-reveal="">
-                <a class="figure-open" data-image="assets/figure-85-3.webp" data-alt="Supplied Human practices figure, source page 85" aria-label="Enlarge figure from source page 85" href="assets/figure-85-3.webp" target="_blank" rel="noopener"><img src="assets/figure-85-3.webp" alt="Supplied Human practices figure from source page 85" width="1800" height="1013" loading="lazy"><span class="figure-zoom">View full size</span></a>
-                <figcaption><span>FIGURE 06</span>From the supplied research document · p. 85</figcaption>
-              </figure>
-              <figure class="research-figure" data-reveal="">
-                <a class="figure-open" data-image="assets/figure-85-4.webp" data-alt="Supplied Human practices figure, source page 85" aria-label="Enlarge figure from source page 85" href="assets/figure-85-4.webp" target="_blank" rel="noopener"><img src="assets/figure-85-4.webp" alt="Supplied Human practices figure from source page 85" width="1800" height="1013" loading="lazy"><span class="figure-zoom">View full size</span></a>
-                <figcaption><span>FIGURE 07</span>From the supplied research document · p. 85</figcaption>
-              </figure>
-            </div>
-          </details> -->
+
+          </details>
 
 
 
 
 <!-- STAGE 3 -->
-<h2 class="stage-heading">STAGE 3: Expanding Impact</h2>
+<h2 class="stage-heading" id="stage3">STAGE 3: Expanding Impact</h2>
 
 <section class="cycle-block" id="stage-3-expanding-impact">
 
@@ -1135,7 +1325,7 @@
 
 
 <!-- STAGE 4: NATIONAL AWARENESS -->
-<h2 class="stage-heading">STAGE 4: NATIONAL AWARENESS</h2>
+<h2 class="stage-heading" id="stage4">STAGE 4: NATIONAL AWARENESS</h2>
 
 <section class="cycle-block" id="stage-4-national-awareness">
 
@@ -1272,17 +1462,20 @@
 
   </div>
 </section>
-
+        
           <a class="next-chapter" id="chapter-next" href="education.html" data-reveal=""><span><span class="small-label">CONTINUE EXPLORING</span><strong>Education</strong></span><span class="next-plus" aria-hidden="true">+</span></a>
         </article>
-      </div>
+    </div>
+  </div>
+  
     </main>
+   
 
-    <dialog class="figure-dialog" aria-label="Enlarged research figure">
+     <dialog class="figure-dialog" aria-label="Enlarged research figure">
       <button class="dialog-close" aria-label="Close enlarged figure">Close <span aria-hidden="true">×</span></button>
       <img alt="">
       <p>Original figure from the supplied research document</p>
-    </dialog>
+    </dialog> 
      <footer class="site-footer">
       <div class="footer-top">
         <div>
@@ -1372,5 +1565,29 @@
         <a href="#top">Back to top</a>
       </div>
     </footer>
+
+    
+<script>
+document.querySelectorAll('#main .toc a').forEach(link => {
+  link.addEventListener('click', function (e) {
+    const targetId = this.getAttribute('href');
+
+    if (targetId && targetId.startsWith('#')) {
+      const target = document.querySelector(targetId);
+
+      if (target) {
+        e.preventDefault();
+
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+
+        history.replaceState(null, '', targetId);
+      }
+    }
+  });
+});
+</script>
   </body>
 </html>

@@ -7,9 +7,9 @@
     <meta name="description" content="MELANIFY explores a biological pathway from PET plastic waste to allomelanin. Discover our engineering, research and community work.">
     <title>Plastic, reimagined. | MELANIFY</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="css/common-typography.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="css/common-typography.css">
     <script src="script.js" defer=""></script>
 
 
@@ -26,98 +26,33 @@
 }
 
 
-   /* NAVIGATION INDICATORS */
-
-.nav-indicator {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 16px;
-  height: 16px;
-  min-width: 16px;
-  flex: 0 0 16px;
-  background-color: #f28c28;
-  border-radius: 2px;
+.environment-card p{
+  font-size: 20px !important;
 }
 
-
-   /* BRAND / LOGO */
-
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-width: 0;
-  max-width: 100%;
+.environment-card h2{
+  font-size: 20px !important;
 }
 
-.brand-logo {
-  display: block;
-  width: 80px;
-  height: 80px;
-  max-width: 100%;
-  flex: 0 0 auto;
-  object-fit: contain;
-  margin: 0;
+.engineering-top-intro{
+margin-top: 20px !important;
 }
 
-
-   /* MAIN TAB INDICATOR */
-
-
-.nav-main::before {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 6px;
-  background-color: #ffffff;
-  border-radius: 50%;
+.impact-card{
+  margin-bottom: 18px;
 }
 
-
-   /* DROPDOWN INDICATOR */
-
-
-.nav-dropdown-icon::before {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 6px;
-  border-right: 1.5px solid #ffffff;
-  border-bottom: 1.5px solid #ffffff;
-  transform: translateY(-2px) rotate(45deg);
-}
-
-
-   /* NAVIGATION LAYOUT */
-
-
-#main-nav {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px 12px;
-  max-width: 100%;
-}
-
-#main-nav > a.main-tab,
-#main-nav .nav-group > summary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-width: 0;
-  max-width: 100%;
-  line-height: 1.5;
-}
-
-/* Main navigation links */
-
-#main-nav > a {
-  overflow-wrap: anywhere;
+.melanify-intro p{
+  font-size: 22px !important;
 }
 
    /* SECTION HEADING */
+.story-section h1 {
+text-align: center;
+padding-top: 0 !important;
+padding-bottom: 15px !important;
 
+}
 
 .story-section .section-heading h2 {
   width: 100%;
@@ -136,102 +71,6 @@ li {
   font-size: 18px;
   line-height: 1.8;
 }
-
-   /* TABLET RESPONSIVE */
-
-
-@media (max-width: 900px) {
-  .brand-logo {
-    width: 36px;
-    height: 36px;
-  }
-
-  #main-nav {
-    gap: 8px 10px;
-  }
-
-  #main-nav > a.main-tab,
-  #main-nav .nav-group > summary {
-    gap: 6px;
-    font-size: 14px;
-  }
-
-  .story-section .section-heading h2 {
-    font-size: clamp(27px, 4vw, 36px);
-  }
-}
-
-
-   /* MOBILE RESPONSIVE */
-
-
-@media (max-width: 600px) {
-  .brand {
-    gap: 6px;
-  }
-
-  .brand-logo {
-    width: 32px;
-    height: 32px;
-  }
-
-  #main-nav {
-    width: 100%;
-    gap: 8px;
-  }
-
-  #main-nav > a.main-tab,
-  #main-nav .nav-group > summary {
-    font-size: 13px;
-    gap: 6px;
-  }
-
-  #main-nav > a::before,
-  #main-nav .nav-group > summary::before {
-    width: 14px;
-    height: 14px;
-    min-width: 14px;
-    flex-basis: 14px;
-  }
-
-  #main-nav .nav-group > summary::before {
-    background-size: 11px;
-  }
-
-  .story-section .section-heading h2 {
-    width: 100%;
-    font-size: clamp(26px, 6.5vw, 34px);
-    line-height: 1.25;
-    text-align: left;
-    white-space: normal;
-    text-wrap: wrap;
-  }
-}
-
-
-   /* SMALL MOBILE */
-
-
-@media (max-width: 360px) {
-  .brand-logo {
-    width: 28px;
-    height: 28px;
-  }
-
-  #main-nav {
-    gap: 6px;
-  }
-
-  #main-nav > a.main-tab,
-  #main-nav .nav-group > summary {
-    font-size: 12px;
-  }
-
-  .story-section .section-heading h2 {
-    font-size: 26px;
-  }
-}
-
 
    /* REDUCED MOTION ACCESSIBILITY */
 
@@ -264,11 +103,18 @@ li {
     </a>
 
     
-    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
-      <span></span>
-      <span></span>
-      <span class="sr-only">Toggle navigation</span>
-    </button>
+  <button class="menu-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="main-nav">
+
+  <span class="hamburger-icon" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+  </button>
 
     <nav id="main-nav" aria-label="Main navigation">
 
@@ -280,7 +126,7 @@ li {
         <summary>Project<span class="chevron"></span></summary>
         <div class="nav-dropdown">
           <a href="description.html">Description: Problem Breakdown</a>
-          <a href="proposed-pathway.html">Proposed Pathway</a>
+          <!-- <a href="proposed-pathway.html">Proposed Pathway</a> -->
         </div>
       </details>
 
@@ -340,8 +186,18 @@ li {
 <section class="home-hero" id="top">
 
   <!-- Hero Image -->
-  <div class="hero-image">
+  <!-- <div class="hero-image">
     <img src="images/hero-image-removebg-preview.png" alt="MELANIFY hero image">
+  </div> -->
+
+   <!-- Text Image: Slowly Moves Forward and Backward -->
+  <div class="hero-image" id="logo1">
+    <img src="images/logo_1-removebg-preview.png" alt="MELANIFY Text">
+  </div>
+
+  <!-- Logo Image: Gently Moves -->
+  <div class="hero-image" id="logo2">
+    <img src="images/logo_2-removebg-preview.png" alt="MELANIFY Logo">
   </div>
 
   <!-- Heading and Paragraph Below Image -->
@@ -356,67 +212,150 @@ li {
 </section>
 
 
+<!-- Regional Context Section -->
+<section class="regional-context">
+  <div class="regional-container">
+
+    <p class="regional-label">📍 REGIONAL CONTEXT</p>
+
+    <div class="regional-cards">
+
+      <!-- Card 1: Plastic Waste -->
+      <article class="regional-card">
+        <div class="regional-icon waste-icon">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M19 18h26l-2 37H21z" fill="#d3deee"
+              stroke="#075473" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M16 13h32M25 13V8h14v5"
+              fill="none" stroke="#075473" stroke-width="3"
+              stroke-linecap="round"/>
+            <rect x="25" y="23" width="7" height="13" rx="2"
+              fill="#075473"/>
+            <rect x="35" y="27" width="7" height="13" rx="2"
+              fill="#789dd1"/>
+            <path d="M27 43h12" stroke="#075473"
+              stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <h2>1.8M+ Tons</h2>
+        <p>Annual PET &amp; plastic waste generated in Thailand.</p>
+      </article>
+
+      <!-- Card 2: UV Index -->
+      <article class="regional-card">
+        <div class="regional-icon sun-icon">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <g stroke="#e88932" stroke-width="4"
+              stroke-linecap="round">
+              <path d="M32 5v8M32 51v8M5 32h8M51 32h8"/>
+              <path d="m13 13 6 6m26 26 6 6M51 13l-6 6M19 45l-6 6"/>
+            </g>
+            <circle cx="32" cy="32" r="13" fill="#f5a33b"/>
+            <circle cx="27" cy="27" r="4" fill="#ffd58a"/>
+          </svg>
+        </div>
+
+        <h2>11+ Very High</h2>
+        <p>Extreme UV Index in Thailand requiring daily protection.</p>
+      </article>
+
+      <!-- Card 3: Sunscreen Ban -->
+      <article class="regional-card">
+        <div class="regional-icon ban-icon">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="27" fill="#fff"
+              stroke="#d94a42" stroke-width="5"/>
+            <path d="M25 19h14v6h4v22H21V25h4z"
+              fill="#fff" stroke="#789dd1" stroke-width="2.5"
+              stroke-linejoin="round"/>
+            <path d="M28 19v-5h8v5"
+              fill="none" stroke="#789dd1" stroke-width="2.5"/>
+            <path d="M14 14 50 50" stroke="#d94a42"
+              stroke-width="5" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <h2>100% Ban</h2>
+        <p>National park ban on toxic chemical sunscreens in Thailand.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+
 <!-- Explore the Story -->
 
 <section class="story-section" id="explore-story">
+
+  <h1 class="story-title">
+    Two challenges.
+    <span>One new possibility.</span>
+  </h1>
+
   <div class="story-container">
 
     <div class="section-heading">
-      <span class="eyebrow">EXPLORE THE STORY</span>
-        
-<h2 class="story-title">
-    Two challenges.
-    <span>One new possibility.</span>
-</h2>
       <p>
         Before we can build a solution, we must look at the two
         interconnected environmental challenges unfolding right here in Thailand.
       </p>
     </div>
 
-    <h3 class="challenge-heading">THE CORE CHALLENGE</h3>
+    <h3 class="challenge-heading">⚠️ THE UNMET NEED</h3>
 
-    
- <div class="environment-container">
+    <h2 class="unmet-main-heading">
+      Why mechanical recycling and current sunscreens fail
+    </h2>
+
+    <div class="environment-container">
 
       <!-- First Card -->
       <article class="environment-card">
-        <h2>Persistent Plastic Waste</h2>
+
+        <h2>♻️ The Recycling Bottleneck</h2>
 
         <img
-          src="images/plastic-waste.jpeg"
+          src="images/image 1.jpg"
           alt="Plastic waste bottles and environmental pollution"
           class="environment-image"
         >
 
         <p>
-          Over 1.8 million tons of plastic waste are generated
-          annually in Thailand, with less than 20% currently
-          recycled. Uncollected PET bottles regularly contaminate
-          vital river systems and marine ecosystems.
+          Mechanical recycling breaks down plastic's molecular structure,
+          causing it to lose strength and quality after every cycle.
+          This forces most recycled PET into lower-value products
+          (like carpets and textiles) that eventually end up in landfills
+          anyway, while chemical upcycling remains costly and
+          energy-intensive.
         </p>
+
       </article>
 
       <!-- Second Card -->
       <article class="environment-card">
-        <h2>Extreme UV &amp; Reef Degradation</h2>
+
+        <h2>☀️ The UV Protection Dilemma</h2>
 
         <img
-          src="images/coral-reef.jpeg"
-          alt="Sunlight shining through the ocean"
+          src="images/image 2.jpg"
+          alt="Coral reef affected by marine pollution"
           class="environment-image"
         >
 
         <p>
-          Thailand endures extreme year-round UV exposure.
-          However, commercial chemical sunscreens containing
-          oxybenzone severely harm coral larvae, leading to
-          national bans across all Thai marine national parks.
+          Synthetic chemical UV filters cause widespread coral bleaching
+          and marine damage, triggering strict government bans.
+          Meanwhile, safe mineral alternatives (ZnO/TiO2) are
+          energy-intensive to mine, expensive, and leave an undesirable
+          white cast on the skin, limiting consumer adoption.
         </p>
+
       </article>
 
     </div>
-
 
     <div class="story-action">
       <a href="description.html" class="button button-primary story-button">
@@ -427,155 +366,50 @@ li {
   </div>
 </section>
 
-<!-- Biological Pathway Section -->
 
-<section class="melanify-section" id="melanify-pathway">
 
-  <div class="melanify-container">
 
-    <!-- Introduction -->
-    <div class="melanify-intro">
-      <p>
-        To address both plastic pollution and reef degradation
-        simultaneously, MELANIFY bridges the gap with a single
-        biological pathway.
-      </p>
-    </div>
+<!-- SECTION 4: OUR SOLUTION -->
+<section class="solution-section" id="our-solution">
+  <div class="solution-container">
 
-    <!-- Scientific pathway image -->
-    <div class="melanify-image-wrap">
+    <div class="solution-image-wrap">
       <img
-        src="images/pathway.png"
-        alt="MELANIFY biological pathway showing PET breakdown,
-        MHET, TPA, PCA, catechol and catechol-melanin formation"
-        class="melanify-science-image"
+        src="images/logo 3.jpg"
+        alt="MELANIFY biological pathway for converting PET plastic into allomelanin"
+        class="solution-image"
       >
     </div>
 
-    <!-- Interactive pathway -->
-    <div class="pathway-widget">
+    <div class="solution-content">
 
-      <div class="pathway-widget-heading">
-        <span class="pathway-label">INTERACTIVE DIAGRAM</span>
-        <h2>Explore the MELANIFY Pathway</h2>
-        <p>
-          Click any step to explore the biological process
-          and its role in transforming plastic waste.
-        </p>
+      <div class="solution-label-wrap">
+        <span class="solution-label">OUR SOLUTION</span>
       </div>
 
-      <!-- Clickable steps -->
-      <div
-        class="pathway-steps"
-        role="group"
-        aria-label="Six steps of the MELANIFY pathway"
-      >
+      <h2>A Biological Engine for Upcycling PET Plastic</h2>
 
-        <button class="pathway-step active"
-          type="button" data-step="0"
-          aria-pressed="true">
-          <span class="step-number">01</span>
-          <span class="step-name">PET</span>
-        </button>
+      <p>
+        We developed an integrated dual-host bioconversion pathway
+        that transforms post-consumer PET plastic waste into pure,
+        reef-safe allomelanin. MELANIFY offers sustainable UV
+        photoprotection by directly connecting plastic degradation
+        to biomaterial synthesis.
+      </p>
 
-        <span class="pathway-arrow" aria-hidden="true">→</span>
-
-        <button class="pathway-step"
-          type="button" data-step="1"
-          aria-pressed="false">
-          <span class="step-number">02</span>
-          <span class="step-name">MHET</span>
-        </button>
-
-        <span class="pathway-arrow" aria-hidden="true">→</span>
-
-        <button class="pathway-step"
-          type="button" data-step="2"
-          aria-pressed="false">
-          <span class="step-number">03</span>
-          <span class="step-name">TPA</span>
-        </button>
-
-        <span class="pathway-arrow" aria-hidden="true">→</span>
-
-        <button class="pathway-step"
-          type="button" data-step="3"
-          aria-pressed="false">
-          <span class="step-number">04</span>
-          <span class="step-name">PCA</span>
-        </button>
-
-        <span class="pathway-arrow" aria-hidden="true">→</span>
-
-        <button class="pathway-step"
-          type="button" data-step="4"
-          aria-pressed="false">
-          <span class="step-number">05</span>
-          <span class="step-name">Catechol</span>
-        </button>
-
-        <span class="pathway-arrow" aria-hidden="true">→</span>
-
-        <button class="pathway-step"
-          type="button" data-step="5"
-          aria-pressed="false">
-          <span class="step-number">06</span>
-          <span class="step-name">Allomelanin</span>
-        </button>
-
-      </div>
-
-      <!-- Information panel -->
-      <div
-        class="pathway-info"
-        id="pathway-info"
-        aria-live="polite"
-        aria-atomic="true"
-      >
-
-        <div class="info-topline">
-          <span class="info-dot"></span>
-          <span id="info-header">
-            STEP 01 — STARTING MATERIAL
-          </span>
-        </div>
-
-        <h3 id="info-title">PET Plastic</h3>
-
-        <p id="info-description">
-          Post-consumer polyethylene terephthalate (PET)
-          plastic waste serves as the primary carbon feedstock,
-          transforming a major environmental waste stream into
-          a valuable biological resource.
-        </p>
-
-        <div class="info-mechanism">
-          <span class="mechanism-label">
-            BIOLOGICAL TOOL / MECHANISM
-          </span>
-
-          <p id="info-mechanism">
-            Waste Aggregation &amp; Thermal Pre-Conditioning
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- Proposed pathway button -->
-    <div class="melanify-action">
-      <a
-        href="proposed-pathway.html"
-        class="melanify-button"
-      >
-        Go to our Proposed Pathway and see the process in detail!
-        <span aria-hidden="true">→</span>
+      <a href="description.html#our-solution-details"
+         class="solution-button">
+        Read full project description <span>&rarr;</span>
       </a>
-    </div>
 
+    </div>
   </div>
 </section>
+
+
+
+
+<!-- Impact section  -->
 
 <section class="impact-section" id="values">
 
@@ -607,21 +441,22 @@ li {
             class="impact-image"
             loading="lazy"
           >
-          <span class="impact-number">01</span>
+          <!-- <span class="impact-number">01</span> -->
         </div>
 
         <div class="impact-card-content">
           <span class="impact-badge">
-            ENVIRONMENTAL PROTECTION
+            01 — ENVIRONMENTAL PROTECTION
+
           </span>
 
           <h3>Reef-Safe UV Shield</h3>
 
           <p>
-            Replaces toxic synthetic sunscreen chemicals like
-            oxybenzone with a proposed biodegradable, non-nano
-            biomaterial designed to protect human skin while
-            reducing potential harm to coral reefs and marine life.
+             Replaces toxic synthetic sunscreen chemicals like oxybenzone 
+             with a 100% biodegradable, non-nano biomaterial that protects
+             human skin without causing coral bleaching or marine damage.
+
           </p>
         </div>
 
@@ -637,21 +472,21 @@ li {
             class="impact-image"
             loading="lazy"
           >
-          <span class="impact-number">02</span>
+          <!-- <span class="impact-number">02</span> -->
         </div>
 
         <div class="impact-card-content">
           <span class="impact-badge">
-            SUSTAINABLE FEEDSTOCK
+           02 — SUSTAINABLE FEEDSTOCK
           </span>
 
           <h3>Upcycled Plastic Waste</h3>
 
           <p>
-            Transforms uncollected PET plastic bottles into a
-            potential high-value pigment, helping divert persistent
-            plastic pollution from Thai rivers and oceans toward
-            a circular, resource-recovery model.
+            Transforms uncollected PET plastic bottles into a 
+            high-value pigment, diverting persistent plastic 
+            pollution from Thai rivers and oceans into a closed-loop 
+            economic model.
           </p>
         </div>
 
@@ -667,21 +502,21 @@ li {
             class="impact-image"
             loading="lazy"
           >
-          <span class="impact-number">03</span>
+          <!-- <span class="impact-number">03</span> -->
         </div>
 
         <div class="impact-card-content">
           <span class="impact-badge">
-            PERFORMANCE BIO-ACTIVE
+            03 — PERFORMANCE BIO-ACTIVE
           </span>
 
           <h3>UV-Booster &amp; Antioxidant</h3>
 
           <p>
-            Explores the potential of natural light absorption
-            and free-radical scavenging to support UV protection
-            and antioxidant performance in future biomaterial
-            applications.
+            Combines natural broad-spectrum light extinction 
+            with powerful free-radical scavenging capabilities 
+            to deliver enhanced SPF protection and anti-aging 
+            skin benefits.
           </p>
         </div>
 
@@ -730,6 +565,125 @@ li {
   </div>
 
 </section>
+
+
+
+
+
+<!-- SECTION 6: SYNTHETIC BIOLOGY & WET LAB -->
+<section class="wetlab-section" id="wetlab">
+  <div class="wetlab-container">
+
+    <!-- LEFT SIDE -->
+    <div class="wetlab-intro">
+      <span class="wetlab-eyebrow">OUR RESEARCH</span>
+
+      <h2>Synthetic Biology &amp; Wet Lab</h2>
+
+      <h3>From Plastic Monomers to UV Protection</h3>
+
+      <p>
+        To convert persistent plastic waste into reef-safe
+        photoprotection, MELANIFY uses a dual-host synthetic
+        pipeline dividing PET monomer degradation and allomelanin
+        synthesis between Pichia pastoris and Escherichia coli.
+        Explore our iterative Design-Build-Test-Learn cycles,
+        plasmid construction, and quantitative assay results.
+      </p>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="wetlab-links">
+
+      <!-- Engineering Card -->
+      <article class="wetlab-card">
+        <div class="wetlab-card-icon" aria-hidden="true">⚗</div>
+
+        <h3>Engineering &amp; Wet Lab</h3>
+
+        <p>
+          Dive into our iterative DBTL design cycles, genetic
+          construct validation, and experimental assay data
+          across both host chassis.
+        </p>
+
+        <a href="engineering.html" class="wetlab-button">
+          Explore Wet Lab &amp; Engineering
+          <span aria-hidden="true">→</span>
+        </a>
+      </article>
+
+      <!-- Safety Card -->
+      <article class="wetlab-card">
+        <div class="wetlab-card-icon" aria-hidden="true">✓</div>
+
+        <h3>Safety &amp; Biosafety</h3>
+
+        <p>
+          Discover our biocontainment protocols, dual-host
+          organism risk assessment, and lab safety measures.
+        </p>
+
+        <a href="safety.html" class="wetlab-button">
+          View Safety Protocols
+          <span aria-hidden="true">→</span>
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- SECTION 7: READY TO DIVE DEEPER -->
+<section class="dive-section" id="explore-more">
+  <div class="dive-container">
+
+    <div class="dive-heading">
+      <span class="dive-eyebrow">EXPLORE MELANIFY</span>
+      <h2>Ready to Dive Deeper?</h2>
+    </div>
+
+    <div class="dive-rows">
+
+      <a href="description.html" class="dive-row">
+        <div class="dive-row-content">
+          <h3>PROJECT</h3>
+          <p>Explore our project description, dual-host pipeline, and design.</p>
+        </div>
+        <span class="dive-arrow">→</span>
+      </a>
+
+      <a href="engineering.html" class="dive-row">
+        <div class="dive-row-content">
+          <h3>WET LAB</h3>
+          <p>Dive into engineering cycles, results, parts, and safety protocols.</p>
+        </div>
+        <span class="dive-arrow">→</span>
+      </a>
+
+      <a href="human-practices.html" class="dive-row">
+        <div class="dive-row-content">
+          <h3>INTEGRATED HUMAN PRACTICES</h3>
+          <p>See how stakeholder feedback, education, and market analysis shaped us.</p>
+        </div>
+        <span class="dive-arrow">→</span>
+      </a>
+
+      <a href="team.html" class="dive-row">
+        <div class="dive-row-content">
+          <h3>TEAM &amp; ATTRIBUTIONS</h3>
+          <p>Meet the students and advisors behind MELANIFY and view attributions.</p>
+        </div>
+        <span class="dive-arrow">→</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
 
     </main>
     <footer class="site-footer">
@@ -915,5 +869,35 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
     </script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const heroText = document.querySelector(".home-hero .hero-copy");
+
+    
+    const logo1 = document.querySelector(".home-hero #logo1");
+    const logo2 = document.querySelector(".home-hero #logo2");
+
+    if (logo1) logo1.classList.add("logo-ready");
+    if (logo2) logo2.classList.add("logo-ready");
+
+
+    if (!heroText) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                heroText.classList.add("show-text");
+                observer.unobserve(heroText);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    observer.observe(heroText);
+});
+</script>
   </body>
 </html>
